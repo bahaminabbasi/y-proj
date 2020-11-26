@@ -1,0 +1,81 @@
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+  <!--##Add Products###-->
+  <section id="addProduct1">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-10 col-lg-9 col-md-8 mr-auto">
+          <div class="pt-5 pr-3 mt-3 mb-5">
+            <form action="" method="POST" enctype="multipart/form-data" class="mt-5">
+              {% csrf_token %}
+              <div class="form-group">
+                <label for="productNameFa">نام محصول</label>
+                <input type="text" class="form-control" name="persianTitle" id="persianTitle" required>
+              </div>
+              <div class="form-group">
+                <label for="productNameEn">نام لاتین محصول</label>
+                <input type="text" class="form-control" name="englishTitle" id="englishTitle" required>
+              </div>
+              <div class="form-group">
+                <label for="productNameEn">نام برند</label>
+                <input type="text" class="form-control" name="brand_name" id="brand_name" required>
+              </div>
+              <div class="form-group">
+                <label for="productPrice">قیمت</label>
+                <input type="text" class="form-control" name="price" id="price" required>
+              </div>
+              <div class="form-group" style="direction:rtl;">
+                <label for="productCount">تعداد</label>
+                <input type="text" class="form-control" name="quantity" id="quantity" required>
+              </div>
+              <div class="form-group">
+                <label for="productImage">تصویر محصول</label>
+                <input type="file" class="form-control-file" name="image" id="image" required>
+              </div>
+              <div class="form-group">
+                <label for="productImage">دسته بندی</label>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm">
+                        <select id="select_categories" name="select_categories" class="form-control">
+                          <option>-------------</option>
+                          {% for category in categories %}
+                            <option value="{{ category.name }}" id="{{ category.name }}">{{ forloop.counter }}. {{ category }}</option>
+                          {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-sm">
+                      <select  id='levelone_placeholder'  name="levelone_placeholder" class="form-control">
+                        <option value="">-------------</option>
+                      </select>
+                    </div>
+                    <div class="col-sm">
+                      <select  id='leveltwo_placeholder'  name="leveltwo_placeholder" class="form-control">
+                        <option value="">-------------</option>
+                      </select>
+                    </div>
+                    <div class="col-sm">
+                      <select  id='levelthree_placeholder'  name="levelthree_placeholder" class="form-control">
+                        <option value="">-------------</option>
+                      </select>
+                    </div>
+                  </div>
+              </div>
+              </div>
+
+              <div class="form-group">
+                <label for="productImage">مشخصات:</label>
+                <div class="row">
+                {{ des_form }}
+              </div>
+              </div>
+              <button type="submit" class="btn btn-primary">افزودن محصول</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--##End of Add Products###-->
+{% endblock %}

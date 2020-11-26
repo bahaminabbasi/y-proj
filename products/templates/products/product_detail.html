@@ -1,0 +1,277 @@
+{% extends 'website/base.html' %}
+{% block content %}
+  <!--single product-->
+  <section class="single-product py-5">
+    <div class="container">
+      <div class="row">
+        <!--image of product-->
+        <div class="col-10 mx-auto col-lg-4 text-center my-5">
+          <div class="single-product-img-container">
+            <img src="{{ product.image.url }}" class="img-fluid" alt="singleProduct">
+          </div>
+
+          <div class="row single-product-photos mt-3">
+            <!--##Single photo of product###-->
+            <div class="col-2 col-sm-2 single-product-photo p-1">
+              <img src="https://placehold.it/90x90" class="img-fluid" alt="singleProduct">
+            </div>
+            <!--##end of Single photo of product##-->
+            <!--##Single photo of product###-->
+            <div class="col-2 col-sm-2 single-product-photo p-1">
+              <img src="https://placehold.it/90x90" class="img-fluid" alt="singleProduct">
+            </div>
+            <!--##end of Single photo of product##-->
+            <!--##Single photo of product###-->
+            <div class="col-2 col-sm-2 single-product-photo p-1">
+              <img src="https://placehold.it/90x90" class="img-fluid" alt="singleProduct">
+            </div>
+            <!--##end of Single photo of product##-->
+            <!--##Single photo of product###-->
+            <div class="col-2 col-sm-2 single-product-photo p-1">
+              <img src="https://placehold.it/90x90" class="img-fluid" alt="singleProduct">
+            </div>
+            <!--##end of Single photo of product##-->
+            <!--##Single photo of product###-->
+            <div class="col-2 col-sm-2 single-product-photo p-1">
+              <img src="https://placehold.it/90x90" class="img-fluid" alt="singleProduct">
+            </div>
+            <!--##end of Single photo of product##-->
+            <!--##Single photo of product###-->
+            <div class="col-2 col-sm-2 single-product-photo p-1">
+              <img src="https://placehold.it/90x90" class="img-fluid" alt="singleProduct">
+            </div>
+            <!--##end of Single photo of product##-->
+          </div>
+        </div>
+        <!--end of image of product-->
+        <!--info-->
+        <div class="col-10 mx-auto col-lg-8 single-product-info my-5 px-lg-5">
+          <!--ratings-->
+          <div class="ratings">
+            <!-- <span class="rating-icon"><i class="fas fa-star"></i></span>
+            <span class="rating-icon"><i class="fas fa-star"></i></span>
+            <span class="rating-icon"><i class="fas fa-star"></i></span>
+            <span class="rating-icon"><i class="fas fa-star"></i></span>
+            <span class="rating-icon"><i class="far fa-star"></i></span> -->
+            <!-- <span class="text-capitalize">36 بازدید</span> -->
+          </div>
+          <!--end of rating-->
+          <h2 class="my-2">{{ product.persian_title }}</h2>
+          {% if product.active and not product.quantity == 0 %}
+            <h2>{{ product_price }}</h2>
+          {% else %}
+            <h4 class="card-title  text-muted">ناموجود</h4>
+          {% endif %}
+          <p class="lead text-muted">{{ product.description.short_description }}</p>
+          <!--buttons-->
+          <div class="d-flex flex-wrap">
+            <!--cart buttons-->
+            <div class="d-flex my-2">
+          {% if product.active  and not product.quantity == 0 %}
+              <!-- <span class="btn btn-black mx-1" style="border:0.1rem solid black;font-size:1.2rem;" id="btnLow">-</span>
+              <span class="btn btn-black mx-1" style="border:0.1rem solid black;font-size:1.2rem;" id="count1">1</span>
+              <span class="btn btn-black mx-1" style="border:0.1rem solid black;font-size:1.2rem;" id="btnUp">+</span>
+            </div> -->
+            <!-- <button class="btn btn-black my-2 mx-2"style="border:0.1rem solid black;font-size:1.2rem;">لیست دلخواه</button> -->
+            
+            {% include 'products/snippets/update_cart.html' with product=product cart=cart %}
+
+          {% endif %}
+          </div>
+          <!--end of buttons-->
+        </div>
+      </div>
+    </div>
+  </section>
+<!--end of single product-->
+<!--product info-->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="jumbotron j1">
+            <ul class="nav nav-tabs d-flex flex-wrap" role="tablist">
+              <li class="nav-item">
+                <a href="#description" class="nav-link active product-info-link" data-toggle="tab">مشخصات محصول</a>
+              </li>
+              <li class="nav-item">
+                <a href="#addinformation" class="nav-link product-info-link" data-toggle="tab">اطلاعات کاربردی</a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div id="description" class="container tab-pane active">
+                <!--##single Row Description##-->
+                <div class="row singleRowDescription mt-2">
+                  <div class="col-2 desRight text-white font-weight-bold">نوع محصول</div>
+                  <div class="col-9 desLeft mr-3 font-weight-bold">{{ product.description.form }}</div>
+                </div>
+                <!--##End of single Row Description##-->
+                <!--##single Row Description##-->
+                <div class="row singleRowDescription mt-2">
+                  <div class="col-2 desRight text-white font-weight-bold">سایز</div>
+                  <div class="col-9 desLeft mr-3 font-weight-bold">{{ product.description.pack_of }}</div>
+                </div>
+                <!--##End of single Row Description##-->
+                <!--##single Row Description##-->
+                <div class="row singleRowDescription mt-2">
+                  <div class="col-2 desRight text-white font-weight-bold">کشور سازنده</div>
+                  <div class="col-9 desLeft mr-3 font-weight-bold">{{ product.description.made_in }}</div>
+                </div>
+                <!--##End of single Row Description##-->
+                <!--##single Row Description##-->
+                <div class="row singleRowDescription mt-2">
+                  <div class="col-2 desRight text-white font-weight-bold">جنسیت مصرف</div>
+                  <div class="col-9 desLeft mr-3 font-weight-bold">{{ product.description.gender }}</div>
+                </div>
+                <!--##End of single Row Description##-->
+                <!--##single Row Description##-->
+                <!--##End of single Row Description##-->
+              </div>
+              <div id="addinformation" class="tab-pane fade">
+                <!--##single Row Description##-->
+                <div class="row singleRowDescription mt-2">
+                  <div class="col-2 desRight text-white font-weight-bold">مشخصه ها</div>
+                  <div class="col-9 desLeft mr-3 font-weight-bold">{{ product.description.features }}</div>
+                </div>
+                <div class="row singleRowDescription mt-2">
+                  <div class="col-2 desRight text-white font-weight-bold">دوز مصرف</div>
+                  <div class="col-9 desLeft mr-3 font-weight-bold">{{ product.description.dosage }}</div>
+                </div>
+                <!--##End of single Row Description##-->
+                <!--##single Row Description##-->
+                <div class="row singleRowDescription mt-2">
+                  <div class="col-2 desRight text-white font-weight-bold">روش مصرف</div>
+                  <div class="col-9 desLeft mr-3 font-weight-bold">{{ product.description.usage }}</div>
+                </div>
+                <div class="row singleRowDescription mt-2">
+                  <div class="col-2 desRight text-white font-weight-bold">شرایط نگهداری</div>
+                  <div class="col-9 desLeft mr-3 font-weight-bold">{{ product.description.storing }}</div>
+                </div>
+                <!--##End of single Row Description##-->
+                <!--##single Row Description##-->
+                <div class="row singleRowDescription mt-2">
+                  <div class="col-2 desRight text-white font-weight-bold">توضیحات</div>
+                  <div class="col-9 desLeft mr-3 font-weight-bold">{{ product.description.short_description }}</div>
+                </div>
+                <!--##End of single Row Description##-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!--end of product info-->
+
+<!--###Related Products with Owl Carousel-->
+  <div class="container my-4 RP">
+    <div class="container relateTitle">
+      <h4>محصولات مرتبط</h4>
+    </div>
+    <div class="container carousel-wrap tab-content" id="relateStuff">
+      <div class="owl-carousel">
+        <div class="item">
+          <div class="card">
+            <a href="#"><img src="https://placehold.it/150x150" class="card-img-top" alt="product"></a>
+            <div class="card-body">
+              <h6 class="card-title">کرم برنزه کننده</h6>
+              <p class="card-text">این محصول برای تست است و تحت لیسانس انگلستان میباشد.</p>
+            </div>
+            <div class="card-footer">
+              <strong>45.200تومان</strong>
+            </div>
+          </div>
+          <span class="featured-search-icon" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></span>
+          <a href="#" class="featured-store-link">افزودن به سبد خرید</a>
+        </div>
+        <div class="item">
+          <div class="card">
+            <a href="#"><img src="https://placehold.it/150x150" class="card-img-top" alt="product"></a>
+            <div class="card-body">
+              <h6 class="card-title">ماسک مو مای</h6>
+              <p class="card-text">این محصول برای تست است و تحت لیسانس آلمان میباشد.</p>
+            </div>
+            <div class="card-footer">
+              <strong>75.200تومان</strong>
+            </div>
+          </div>
+          <span class="featured-search-icon" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></span>
+          <a href="#" class="featured-store-link">افزودن به سبد خرید</a>
+        </div>
+        <div class="item">
+          <div class="card">
+            <a href="#"><img src="https://placehold.it/150x150" class="card-img-top" alt="product"></a>
+            <div class="card-body">
+              <h6 class="card-title">کرم ضدلک ایوروشه3</h6>
+              <p class="card-text">این محصول برای تست است و تحت لیسانس فرانسه میباشد.</p>
+            </div>
+            <div class="card-footer">
+              <strong>95.200تومان</strong>
+            </div>
+          </div>
+          <span class="featured-search-icon" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></span>
+          <a href="#" class="featured-store-link">افزودن به سبد خرید</a>
+        </div>
+        <div class="item">
+          <div class="card">
+            <a href="#"><img src="https://placehold.it/150x150" class="card-img-top" alt="product"></a>
+            <div class="card-body">
+              <h6 class="card-title">کرم ضد آفتاب ببک4</h6>
+              <p class="card-text">این محصول برای تست است و تحت لیسانس انگلستان میباشد.</p>
+            </div>
+            <div class="card-footer">
+              <strong>55.200تومان</strong>
+            </div>
+          </div>
+          <span class="featured-search-icon" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></span>
+          <a href="#" class="featured-store-link">افزودن به سبد خرید</a>
+        </div>
+        <div class="item">
+          <div class="card">
+            <a href="#"><img src="https://placehold.it/150x150" class="card-img-top" alt="product"></a>
+            <div class="card-body">
+              <h6 class="card-title">شامپو ضدریزش آلپسین</h6>
+              <p class="card-text">این محصول برای تست است و تحت لیسانس انگلستان میباشد.</p>
+            </div>
+            <div class="card-footer">
+              <strong>65.200تومان</strong>
+            </div>
+          </div>
+          <span class="featured-search-icon" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></span>
+          <a href="#" class="featured-store-link">افزودن به سبد خرید</a>
+        </div>
+        <div class="item">
+          <div class="card">
+            <a href="#"><img src="https://placehold.it/150x150" class="card-img-top" alt="product"></a>
+            <div class="card-body">
+              <h6 class="card-title">رنگ مو آلوور</h6>
+              <p class="card-text">این محصول برای تست است و تحت لیسانس هلند میباشد.</p>
+            </div>
+            <div class="card-footer">
+              <strong>75.200تومان</strong>
+            </div>
+          </div>
+          <span class="featured-search-icon" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></span>
+          <a href="#" class="featured-store-link">افزودن به سبد خرید</a>
+        </div>
+        <div class="item">
+          <div class="card">
+            <a href="#"><img src="https://placehold.it/150x150" class="card-img-top" alt="product"></a>
+            <div class="card-body">
+              <h6 class="card-title">لوسیون بدن کیو وی</h6>
+              <p class="card-text">این محصول برای تست است و تحت لیسانس انگلستان میباشد.</p>
+            </div>
+            <div class="card-footer">
+              <strong>63.200تومان</strong>
+            </div>
+          </div>
+          <span class="featured-search-icon" data-toggle="modal" data-target="#productModal"><i class="fa fa-search"></i></span>
+          <a href="#" class="featured-store-link">افزودن به سبد خرید</a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+<!--##End of Related Products####-->
+
+{% endblock %}

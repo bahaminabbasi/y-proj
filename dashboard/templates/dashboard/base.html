@@ -1,0 +1,167 @@
+{% load static %}
+{% if user.is_staff %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Daru</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'dashboard/css/styleAdmin.css' %}">
+  <link rel="stylesheet" href="{% static 'dashboard/js/jquery-ui.css' %}">
+  <script src="{% static 'dashboard/js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'dashboard/js/jquery.min.js' %}"></script>
+  <script src="{% static 'dashboard/js/popper.min.js' %}"></script>
+  <script src="{% static 'dashboard/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'dashboard/js/jquery-ui.js' %}"></script>
+  <script src="https://kit.fontawesome.com/594614f60b.js"></script>
+</head>
+<body>
+  <!--navbar-->
+    <nav class="navbar navbar-expand-md navbar-light">
+      <button class="navbar-toggler mr-auto mb-2" type="button" data-toggle="collapse" data-target="#myNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <div class="container-fluid">
+          <div class="row">
+            <!--side Bar-->
+            <div class="col-xl-2 col-lg-3 col-md-4 bg-dark text-white sidebar fixed-top">
+              <a href="#" class="navbar-brand d-block text-white mx-auto text-center py-3 mb-4 bottom-border">Yas Daru</a>
+              <ul class="navbar-nav flex-column mt-4" id="ul1">
+                <!--single menu item-->
+                <li class="nav-item" id="dashboard">
+                  <a href="admin.html" class="nav-link text-white p-3 mb-2 current">
+                    <i class="fas fa-home text-light fa-lg ml-3"></i>
+                    داشبورد
+                  </a>
+                </li>
+                <!--end of single menu item-->
+                <!--single menu item-->
+                <li class="nav-item" id="profile1">
+                  <a href="#" class="nav-link text-white p-3 mb-2 sidebar-link">
+                    <i class="fas fa-user text-light fa-lg ml-3"></i>
+                    پروفایل
+                  </a>
+                </li>
+                <!--end of single menu item-->
+                <!--single menu item-->
+                <li class="nav-item" id="table2">
+                  <a href="{% url 'dashboard:tables' %}" class="nav-link text-white p-3 mb-2 sidebar-link">
+                    <i class="fas fa-table text-light fa-lg ml-3"></i>
+                    جداول
+                  </a>
+                </li>
+                <!--end of single menu item-->
+                <!--single menu item-->
+                <li class="nav-item" id="attachProduct">
+                  <a href="{% url 'dashboard:add-product' %}" class="nav-link text-white p-3 mb-2 sidebar-link">
+                    <i class="fab fa-product-hunt text-light fa-lg ml-3"></i>
+                    افزودن محصول
+                  </a>
+                </li>
+                <!--end of single menu item-->
+                <!--single menu item-->
+                <li class="nav-item" id="accordion">
+                  <a href="#setSlider1" class="nav-link text-white p-3 mb-2 sidebar-link" data-toggle="collapse">
+                    <i class="fas fa-photo-video text-light fa-lg ml-3"></i>
+                   اسلایدر
+                  </a>
+                </li>
+                <ul id="setSlider1" class="collapse navbar" data-parent="#accordion">
+                  <!--single menu item-->
+                <li class="nav-item" id="sliderImage">
+                  <a href="imgUpDash.html" class="nav-link text-white p-3 mb-2 sidebar-link">
+                    <i class="far fa-images text-light fa-lg ml-3" style="font-size:18px;"></i>
+                    تصاویر اسلایدر بالا
+                  </a>
+                </li>
+                <!--end of single menu item-->
+                <!--single menu item-->
+                <li class="nav-item" id="owlCarousel2">
+                  <a href="itemOwlDash.html" class="nav-link text-white p-3 mb-2 sidebar-link">
+                    <i class="fas fa-camera-retro text-light fa-lg ml-3"></i>
+                    آیتم اسلایدر پایین
+                  </a>
+                </li>
+                <!--end of single menu item-->
+                </ul>
+                <!--end of single menu item-->
+                <!--single menu item-->
+                <li class="nav-item" id="showCategory">
+                  <a href="sortProDash.html" class="nav-link text-white p-3 mb-2 sidebar-link">
+                    <i class="far fa-object-group text-light fa-lg ml-3"></i>
+                    دسته بندی محصولات وسط صفحه
+                  </a>
+                </li>
+                <!--end of single menu item-->
+              </ul>
+            </div>
+            <!--end of side Bar-->
+            <!--top Nav-->
+            <div class="col-xl-10 col-lg-9 col-md-8 mr-auto bg-dark fixed-top top-navbar py-2">
+              <div class="row align-items-center">
+                <div class="col-md-4">
+                  <h4 class="text-light mb-0">داشبورد</h4>
+                </div>
+                <div class="col-md-5">
+                  <form action="">
+                    <div class="input-group">
+                      <button type="button" class="btn btn-light search-button"><i class="fas fa-search text-danger"></i></button>
+                      <input type="text" class="form-control search-input" placeholder="جستجو...">  
+                    </div>
+                  </form>
+                </div>
+                <div class="col-md-3">
+                  <ul class="navbar-nav">
+                    <li class="nav-item icon-parent">
+                      <a href="#" class="nav-link icon-bullet"><i class="fas fa-comments text-muted fa-lg"></i></a>
+                    </li>
+                    <li class="nav-item icon-parent">
+                      <a href="#" class="nav-link icon-bullet"><i class="fas fa-bell text-muted fa-lg"></i></a>
+                    </li>
+                    <li class="nav-item mr-md-auto">
+                      <a href="{% url 'accounts:logout' %}" class="nav-link"><i class="fas fa-sign-out-alt text-danger fa-lg"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!--end of top Nav-->
+          </div>
+        </div>
+      </div>
+    </nav>
+  <!--end of navbar-->
+
+  <!--###modal###-->
+  <div class="modal fade" id="sign-out">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">قصد بازگشت دارید؟</h4>
+          <button type="button" class="close mr-auto" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          برای خارج شدن دکمه خروج را فشار دهید
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">بمان</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">خروج</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end of modal###-->
+
+    {% block content %}
+
+    {% endblock %}
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="{% static 'dashboard/js/main.js' %}"></script>
+    <script src="{% static 'dashboard/js/csrf.ajax.js' %}"></script>
+</body>
+</html>
+{% else %}
+no access
+{% endif %}

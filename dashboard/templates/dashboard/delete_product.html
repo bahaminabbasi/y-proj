@@ -1,0 +1,34 @@
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+<section id="addProduct1">
+    <div class="container-fluid">
+        <div class="row mb-5">
+          <div class="col-xl-10 col-lg-9 col-md-8 mr-auto">
+            <div class="row">
+              <div class="col-12">
+                آیا میخواهید این محصول را حذف کنید؟
+                <div class=row>
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ product.image_medium.url }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">{{ product.persian_title }}</h5>
+                          <p class="card-text">{{ product.english_title }}</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">برند: {{ product.brand_name }}</li>
+                          <li class="list-group-item">قیمت:  {{ product.price }}</li>
+                          <li class="list-group-item">تعداد: {{ product.quantity }}</li>
+                        </ul>
+                        <div class="card-body">
+                          <a href="{% url 'dashboard:tables' %}" class="btn btn-success">خیر</a>
+                          <a href="{% url 'dashboard:delete-product-confirmed' product.pk %}" class="btn btn-danger">حذف</a>
+                        </div>
+                      </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>      
+</section>
+{% endblock %}

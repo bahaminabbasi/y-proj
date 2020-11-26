@@ -1,0 +1,127 @@
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+  <!--##Add Products###-->
+  <section id="addProduct1">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-10 col-lg-9 col-md-8 mr-auto">
+          <div class="pt-5 pr-3 mt-3 mb-5">
+            <form action="" method="POST" enctype="multipart/form-data" class="mt-5">
+              {% csrf_token %}
+              <div class="form-group">
+                <label for="productNameFa">نام محصول</label>
+                <input type="text" class="form-control" name="persianTitle" id="persianTitle" value="{{ product.persian_title }}">
+              </div>
+              <div class="form-group">
+                <label for="productNameEn">نام لاتین محصول</label>
+                <input type="text" class="form-control" name="englishTitle" id="englishTitle" value="{{ product.english_title }}">
+              </div>
+              <div class="form-group">
+                <label for="productNameEn">نام برند</label>
+                <input type="text" class="form-control" name="brand_name" id="brand_name" value="{{ product.brand_name }}">
+              </div>
+              <div class="form-group">
+                <label for="productPrice">قیمت</label>
+                <input type="text" class="form-control" name="price" id="price" value="{{ product.price }}">
+              </div>
+              <div class="form-group" style="direction:rtl;">
+                <label for="productCount">تعداد</label>
+                <input type="text" class="form-control" name="quantity" id="quantity" value="{{ product.quantity }}">
+              </div>
+              <div class="form-group" style="direction:rtl;">
+                <label for="productCount">دسته بندی فعلی</label>
+              <div class="form-group" style="direction:rtl;">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">{{ cat0 }}</li>
+                    <li class="breadcrumb-item">{{ sub_cat1 }}</li>
+                    <li class="breadcrumb-item">{{ sub_cat2 }}</li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ sub_cat3 }}</li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+              <div class="form-group">
+                <label for="productImage">دسته بندی جدید</label>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm">
+                        <select id="select_categories" name="select_categories" class="form-control">
+                          <option>-------------</option>
+                          {% for category in categories %}
+                            <option value="{{ category.name }}" id="{{ category.name }}">{{ forloop.counter }}. {{ category }}</option>
+                          {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-sm">
+                      <select  id='levelone_placeholder'  name="levelone_placeholder" class="form-control">
+                        <option value="">-------------</option>
+                      </select>
+                    </div>
+                    <div class="col-sm">
+                      <select  id='leveltwo_placeholder'  name="leveltwo_placeholder" class="form-control">
+                        <option value="">-------------</option>
+                      </select>
+                    </div>
+                    <div class="col-sm">
+                      <select  id='levelthree_placeholder'  name="levelthree_placeholder" class="form-control">
+                        <option value="">-------------</option>
+                      </select>
+                    </div>
+                  </div>
+              </div>
+              </div>
+              <div class="form-group" style="direction:rtl;">
+              description
+              <div class="form-group">
+                <label for="productPrice">کشور سازنده</label>
+                <input type="text" class="form-control" name="made_in" id="made_in" value="{{ product.description.made_in }}">
+              </div>
+              <div class="form-group">
+                <label for="productPrice">جنسیت مصرف</label>
+                <input type="text" class="form-control" name="gender" id="gender" value="{{ product.description.gender }}">
+              </div>
+              <div class="form-group">
+                <label for="productPrice">نوع محصول</label>
+                <input type="text" class="form-control" name="form" id="form" value="{{ product.description.form }}">
+              </div>
+              <div class="form-group">
+                <label for="productPrice">سایز</label>
+                <input type="text" class="form-control" name="pack_of" id="pack_of" value="{{ product.description.pack_of }}">
+              </div>
+              <div class="form-group">
+                <label for="productPrice">دوز مصرف</label>
+                <input type="text" class="form-control" name="dosage" id="dosage" value="{{ product.description.dosage }}">
+              </div>
+              <div class="form-group">
+                <label for="productPrice">روش مصرف</label>
+                <input type="text" class="form-control" name="usage" id="usage" value="{{ product.description.dosage }}">
+              </div>
+              <div class="form-group">
+                <label for="productPrice">توضیحات</label>
+                <input type="text" class="form-control" name="short_description" id="short_description" value="{{ product.description.short_description }}">
+              </div>
+              <div class="form-group">
+                <label for="productPrice">مشخصه ها</label>
+                <input type="text" class="form-control" name="features" id="features" value="{{ product.description.features }}">
+              </div>
+              <div class="form-group">
+                <label for="productPrice">شرایط نگهداری</label>
+                <input type="text" class="form-control" name="storing" id="storing" value="{{ product.description.storing }}">
+              </div>
+            </div>
+            <img src="{{ product.image_medium.url }}" alt="" class="img-thumbnail">
+              <div class="form-group">
+                <label for="productImage">تصویر محصول</label>
+                <input type="file" class="form-control-file" name="image" id="image">
+              </div>
+              <button type="submit" class="btn btn-success">ویرایش محصول</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--##End of Add Products###-->
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'website/base.html' %}
+{% block content %}
+  <!--totals-->
+  <section>
+    <div class="container-fluid">
+      <div class="row">
+        <!--###List of products###-->
+        {% if cart.products.exists %}
+        <div class="col-12 col-lg-9 col-md-8 col-sm-12 my-3">
+          <div class="col PL1">
+            <!--###Single product###-->
+            {% for product in cart.products.all %}
+                <div class="PL2">
+                <div class="col-3 col-lg-3 rightImgList d-flex align-items-center">
+                    <img src="{{ product.image.url }}" alt="product" class="img-fluid">
+                </div>
+                <div class="col-9 col-lg-9 topList1">
+                    <h4>{{ product.persian_title }}</h4>
+                </div>
+                <div class="col-9 col-lg-9 bottumList1 d-flex align-items-end p-1">
+                    <div class="btn-group btn-group-sm" style="direction:ltr;" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-outline-primary">-</button>
+                    <button type="button" class="btn btn-outline-primary">4</button>
+                    <button type="button" class="btn btn-outline-primary">+</button>
+                    </div>
+                    {% include 'products/snippets/update_cart.html' with in_cart=True %}
+                    <p class="priceList1 font-weight-bold">{{ product.price }}<span class="text-muted">تومان</span></p>
+                </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <h1>Cart Empty</h1>
+        {% endif %}
+            <!--###End of Single product###-->
+          </div>
+        </div>
+        <!--###End of List of products###-->
+        <!--###Checkout Section##-->
+        <div class="col-12 col-lg-3 col-md-4 my-3">
+          <div class="card checkout1">
+            <div class="card-body checkoutTop">
+              <p class="topRight4">قیمت کالاها</p>
+              <p class="topLeft4 font-weight-bold">325000<span class="font-weight-200 text-muted mr-1" style="font-size:0.8rem;">تومان</span></p>
+            </div>
+            <div class="card-body checkoutTop">
+              <p class="topRight4">هزینه ارسال</p>
+              <p class="topLeft4 font-weight-bold">11000<span class="font-weight-200 text-muted mr-1" style="font-size:0.8rem;">تومان</span></p>
+            </div>
+            <div class="card-body checkoutTop" style="border-bottom: none;">
+              <p class="topRight4" style="color:#E63946;">جمع</p>
+              <p class="topLeft4 font-weight-bold">336000<span class="font-weight-200 mr-1" style="font-size:0.8rem;">تومان</span></p>
+            </div>
+            <div class="card-footer checkoutBtn">
+              <button type="button" class="btn btn-lg btn-block">ادامه فرآیند خرید</button>
+            </div>
+          </div>
+        </div>
+        <!--###End of Checkout Section##-->
+      </div>
+    </div>
+  </section>
+  <!--end of totals-->
+{% endblock %}

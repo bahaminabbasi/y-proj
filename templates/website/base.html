@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>داروخانه آنلاین یاس دارو</title>
+  <link rel="icon" href="{% static 'website/img/logo.png' %}">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'website/css/style1.css' %}">
+  <link rel="stylesheet" href="{% static 'website/js/jquery-ui.css' %}">
+  <link rel="stylesheet" href="{% static 'website/css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'website/css/owl.theme.default.min.css' %}">
+  <script src="{% static 'website/js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'website/js/jquery.min.js' %}"></script>
+  <script src="{% static 'website/js/popper.min.js' %}"></script>
+  <script src="{% static 'website/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'website/js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'website/js/jquery-ui.js' %}"></script>
+  <script src="{% static 'website/js/main.js' %}"></script>
+  <script src="https://kit.fontawesome.com/594614f60b.js"></script>
+  <style>
+    @font-face{
+  font-family: 'yekan';
+  src: url('{% static "website/fonts/yekan-font/Yekan.ttf" %}') format('truetype'),
+       url('{% static "website/fonts/yekan-font/Yekan.eot" %}') format('embedded-opentype');
+}
+</style>
+</head>
+<body>
+  <header>
+        {% include 'snippets/header.html' %}
+        {% include 'snippets/navbar.html' %}
+  </header>
+      {% block content %}
+      {% endblock %}
+     
+      {% include 'snippets/footer.html' %}
+      {% include 'snippets/small_nav.html' %}
+
+      
+</body>
+</html>

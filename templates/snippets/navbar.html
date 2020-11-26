@@ -1,0 +1,638 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navigation1">
+    <button class="navbar-toggler col-1" type="button" data-toggle="modal" data-target="#myNavbar1">
+      <i class="fa fa-bars" style="font-size: 25px;"></i>
+    </button>
+    <!--###SmallHeader###-->
+    <div class="smallHeader col-11 d-lg-none d-sm-block">
+      <div class="row">
+        <div class="headerTopRight d-flex">
+          <button type="button" class="btn searchBtnSm mr-1"><i class="fas fa-search" style="font-size: 25px;"></i></button>
+          <a href="store.html" class="mr-4 navbar-cart-icon cart1"><i class="fas fa-shopping-cart"></i>
+            <div class="cart-items">
+              2
+            </div>
+            <div class="card cartList" id="cartList" style="direction:rtl;text-align: right;">
+              <div class=" cartHeader" id="cartHeader">
+                <div class="UpCart">
+                  <p><span class="ml-1">2</span>کالا</p>
+                  <a href="store.html">مشاهده سبد خرید<i class="fas fa-angle-double-left mr-2"></i></a>
+                </div>
+              </div>
+              <div class="card-body">
+                <ul class="list-group cartUl" id="cartUl">
+                  <li class="list-group-item">
+                    <a href="#"><img src="https://placehold.it/70x70" alt="cart item" class="img-fluid">
+                    <h5>کرم ضدآفتاب مای</h5>
+                    </a>
+                    <div class="bottomCart1">
+                      <p class="mt-3"><span class="ml-1">2</span>عدد</p>
+                      <button type="button" class="close"><i class="fas fa-trash-alt" style="font-size:1.1rem;"></i></button></i>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="#"><img src="https://placehold.it/70x70" alt="cart item" class="img-fluid">
+                    <h5>شامپو ضدریزش آلپسین</h5>
+                    </a>
+                    <div class="bottomCart1">
+                      <p class="mt-3"><span class="ml-1">2</span>عدد</p>
+                      <button type="button" class="close"><i class="fas fa-trash-alt" style="font-size:1.1rem;"></i></button></i>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="#"><img src="https://placehold.it/70x70" alt="cart item" class="img-fluid">
+                    <h5>فوم اصلاح صورت نیوآ</h5>
+                    </a>
+                    <div class="bottomCart1">
+                      <p class="mt-3"><span class="ml-1">2</span>عدد</p>
+                      <button type="button" class="close"><i class="fas fa-trash-alt" style="font-size:1.1rem;"></i></button></i>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer cartFooter1">
+                <div class="row">
+                  <div class="col-5 footerRight" id="footerRight">
+                    <p class="text-muted">سر رسید</p>
+                    <p class="price1"><span class="font-weight-bold">1,610,000</span>تومان</p>
+                  </div>
+                  <div class="col-7 footerLeft" id="footerLeft">
+                    <a href="#" class="btnCheck btn text-white"   id="btnCheck">پرداخت و ثبت سفارش</a>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            </a>
+            <a href="signIn.html" class="mr-2"><i class="fas fa-user" ></i></a>
+        </div>
+        <div class="headerTopLeft mr-auto">
+          <div class="Brand1"><a href="index.html" class="navbar-brand text-center">
+              <img class="img-fluid" style="width:50px; height:50px;" src="{% static 'website/img/logo.png' %}">
+          </a></div>
+        </div>
+      </div>
+      <div class="container searchBarSmall">
+        <form action=" " class="mb-2">
+          <input type="text" placeholder="دنبال چه چیزی هستید؟ ..." name="search" class="">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+    <!--##End of SmallHeader##-->
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="navbar-nav menuLevel1">
+        <li class="nav-item mx-3" data-timer="1" >
+          <a href="{% url 'products:product-filter' 'cosmetics' 0 %}" class="nav-link">آرایشی بهداشتی<i class="fa fa-angle-down"></i></a>
+          <!--single submenu-->
+          <ul class="navbar-nav menuLevel2">
+            <li class="nav-item mx-2" data-timer="2">
+              <a href="{% url 'products:product-filter' 'sun-care' 1 %}" class="nav-link">محصولات آفتاب</a>
+              <!--single divmenu3-->
+              <div class="container menuLevel3">
+                <div class="row">
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'anti-sun' 2 %}">ضد آفتاب</a></li>
+                      <li><a href="{% url 'products:product-filter' 'face-anti-sun' 3 %}">ضدآفتاب صورت</a></li>
+                      <li><a href="{% url 'products:product-filter' 'eyes-anti-sun' 3 %}">ضدآفتاب دورچشم</a></li>
+                      <li><a href="{% url 'products:product-filter' 'kids-anti-sun' 3 %}">ضدآفتاب کودکان</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'color-anti-sun' 2 %}">ضد آفتاب رنگی</a></li>
+                      <li><a href="{% url 'products:product-filter' 'dry-skin-color-antisun' 3 %}">پوست خشک</a></li>
+                      <li><a href="{% url 'products:product-filter' 'normal-skin-color-antisun' 3 %}">پوست معمولی</a></li>
+                      <li><a href="{% url 'products:product-filter' 'greasy-skin-color-antisun' 3 %}">پوست چرب</a></li>
+                      <li><a href="{% url 'products:product-filter' 'sensitive-skin-color-antisun' 3 %}">پوست حساس</a></li>
+                      <li><a href="{% url 'products:product-filter' 'eye-color-antisun' 3 %}">دور چشم</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'no-color-antisun' 2 %}">ضدآفتاب بی رنگ</a></li>
+                      <li><a href="{% url 'products:product-filter' 'dry-skin-no-color-antisun' 3 %}">پوست خشک</a></li>
+                      <li><a href="{% url 'products:product-filter' 'normal-skin-no-color-antisun' 3 %}">پوست معمولی</a></li>
+                      <li><a href="{% url 'products:product-filter' 'greasy-skin-no-color-antisun' 3 %}">پوست چرب</a></li>
+                      <li><a href="{% url 'products:product-filter' 'sensitive-skin-no-color-antisun' 3 %}">پوست حساس</a></li>
+                      <li><a href="{% url 'products:product-filter' 'eye-no-color-antisun' 3 %}">دور چشم</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'tanning' 2 %}">برنزه کننده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'tanning-oil' 3 %}">روغن برنزه کننده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'tanning-cream' 3 %}">کرم برنزه کننده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'tanning-lotion' 3 %}">لوسیون برنزه کننده</a></li>
+                    </ul>
+                    <ul class='subMenu4 mt-2'>
+                      <li><a href="{% url 'products:product-filter' 'after-sun' 2 %}">افتر سان</a></li>
+                      <li><a href="{% url 'products:product-filter' 'sunburn' 3 %}">آفتاب سوختگی</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--end of single divmenu3-->
+            </li>
+            <li class="nav-item mx-2" data-timer="3">
+              <a href="{% url 'products:product-filter' 'moisturizer' 1 %}" class="nav-link">مرطوب کننده</a>
+              <!--single divmenu3-->
+              <div class="container menuLevel3">
+                <div class="row">
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'moisturizing-cream' 2 %}">مرطوب کننده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'moisturizing-face' 3 %}">مرطوب کننده صورت</a></li>
+                      <li><a href="{% url 'products:product-filter' 'moisturizing-dry-skin' 3 %}">مرطوب کننده پوست خشک</a></li>
+                      <li><a href="{% url 'products:product-filter' 'moisturizing-greasy-skin' 3 %}">مرطوب کننده پوست چرب</a></li>
+                      <li><a href="{% url 'products:product-filter' 'moisturizing-normal-skin' 3 %}">مرطوب کننده پوست معمولی</a></li>
+                      <li><a href="{% url 'products:product-filter' 'moisturizing-sensitive-skin' 3 %}">مرطوب کننده پوست حساس</a></li>
+                      <li><a href="{% url 'products:product-filter' 'moisturizing-face-baby' 3 %}">مرطوب کننده صورت کودک</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'moisturizing-body' 2 %}">مرطوب کننده بدن</a></li>
+                      <li><a href="{% url 'products:product-filter' 'moisturizing-body-cream' 3 %}">کرم مرطوب کننده بدن</a></li>
+                      <li><a href="{% url 'products:product-filter' 'moisturizing-body-lotion' 3 %}">لوسیون مرطوب کننده بدن</a></li>
+                      <li><a href="{% url 'products:product-filter' 'moisturizing-body-oil' 3 %}">روغن مرطوب کننده بدن</a></li>
+                      <li><a href="{% url 'products:product-filter' 'moisturizing-body-baby' 3 %}">مرطوب کننده بدن کودک</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'moisturizing-foot' 2 %}">مرطوب کننده پا</a></li>
+                      <li><a href="{% url 'products:product-filter' 'moisturizing-foot-cream' 3 %}">کرم مرطوب کننده پا</a></li>
+                      <li><a href="{% url 'products:product-filter' 'moisturizing-foot-lotion' 3 %}">لوسیون مرطوب کننده پا</a></li>
+                      <li><a href="{% url 'products:product-filter' 'moisturizing-foot-mask' 3 %}">ماسک مرطوب کننده پا</a></li>
+                      <li><a href="{% url 'products:product-filter' 'moisturizing-foot-baby' 3 %}">مرطوب کننده پای کودک</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'moisturizing-hand' 2 %}">مرطوب کننده دست</a></li>
+                    </ul>
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'opacifier' 2 %}">مرطوب کننده و مات کننده</a></li>
+                    </ul>
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'no-fat-moisturizing' 2 %}">مرطوب کننده فاقد چربی</a></li>
+                    </ul>
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'nutritious-moisturizing' 2 %}">مرطوب کننده مغذی</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--end of single divmenu3-->
+            </li>
+            <li class="nav-item mx-2" data-timer="4">
+              <a href="{% url 'products:product-filter' 'anti-spot' 1 %}" class="nav-link">ضدلک</a>
+              <!--single divmenu3-->
+              <div class="container menuLevel3">
+                <div class="row">
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'face-anti-spot' 2 %}">ضدلک صورت</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-spot-face-cream' 3 %}">کرم ضدلک صورت</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-spot-serum-face' 3 %}">سرم ضدلک صورت</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-spot-gel-face' 3 %}">ژل ضدلک صورت</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-spot-lotion-face' 3 %}">لوسیون ضدلک صورت</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-spot-pan-face' 3 %}">پن ضدلک صورت</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-spot-mask-face' 3 %}">ماسک ضدلک صورت</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-spot-concentrate-face' 3 %}">کنسانتره ضدلک صورت</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'anti-spot-eye' 2 %}">ضدلک دور چشم</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-spot-eye-cream' 3 %}">کرم ضدلک دور چشم</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-spot-eye-gel' 3 %}">ژل ضدلک دور چشم</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-spot-eye-serum' 3 %}">سرم ضدلک دور چشم</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-spot-eye-concealer' 3 %}">کانسیلر ضدلک دور چشم</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'body-anti-spot' 2 %}">ضدلک بدن</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-spot-body-lotion' 3 %}">لوسیون ضدلک بدن</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-spot-body-cream' 3 %}">کرم ضدلک بدن</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-spot-body-gel' 3 %}">ژل ضدلک بدن</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-spot-body-emulsion' 3 %}">امولسیون ضدلک بدن</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'anti-spot-gel' 2 %}">ژل ضدلک</a></li>
+                    </ul>
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'hand-anti-spot' 2 %}">ضدلک دست</a></li>
+                    </ul>
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'anti-spot-concentrate' 2 %}">کنسانتره ضدلک</a></li>
+                    </ul>
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'anti-spot-cream' 2 %}">کرم ضدلک</a></li>
+                    </ul>
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'anti-spot-serum' 2 %}">سرم ضدلک</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--end of single divmenu3-->
+            </li>
+            <li class="nav-item mx-2" data-timer="5">
+              <a href="{% url 'products:product-filter' 'anti-aging' 1 %}" class="nav-link">ضدچروک</a>
+              <!--single divmenu3-->
+              <div class="container menuLevel3">
+                <div class="row">
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'anti-aging-face' 2 %}">صورت</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-aging-night' 3 %}">شب</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-aging-day' 3 %}">روز</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-aging-lifting' 3 %}">لیفتینگ</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-aging-hand-foot' 3 %}">ضدچروک برای دست و پا</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-aging-serum' 3 %}">سرم ضدچروک</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-aging-cream' 3 %}">کرم ضدچروک</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-aging-lotion' 3 %}">لوسیون ضدچروک</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'anti-aging-eye-lip' 2 %}">دور چشم و لب</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-aging-filler' 3 %}">فیلر</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-aging-lip' 3 %}">لب</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-aging-eye' 3 %}">ضدچروک برای دور چشم</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-aging-peeling-lifting' 3 %}">لیفتینگ و پیلینگ</a></li>
+                      <li><a href="{% url 'products:product-filter' 'drooping' 3 %}">افتادگی</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--end of single divmenu3-->
+            </li>
+            <li class="nav-item mx-2" data-timer="6">
+              <a href="{% url 'products:product-filter' 'skin-repair' 1 %}" class="nav-link">ترمیم کننده پوست</a>
+              <!--single divmenu3-->
+              <div class="container menuLevel3">
+                <div class="row">
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'scar-cream' 2 %}">زخم، سوختگی و اسکار</a></li>
+                      <li><a href="{% url 'products:product-filter' 'repair-cream' 3 %}">کرم ترمیم کننده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'repair-gel' 3 %}">ژل ترمیم کننده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'repair-lotion' 3 %}">لوسیون ترمیم کننده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'repair-oil' 3 %}">روغن ترمیم کننده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'repair-serum' 3 %}">سرم ترمیم کننده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'repair-pad' 3 %}">پد ترمیم کننده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'comfeel' 3 %}">کامفیل</a></li>
+                      <li><a href="{% url 'products:product-filter' 'repair-burn' 3 %}">سوختگی</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'crack' 2 %}">ترک</a></li>
+                      <li><a href="{% url 'products:product-filter' 'thin-crack' 3 %}">ترک لاغری</a></li>
+                      <li><a href="{% url 'products:product-filter' 'crack-pregnancy' 3 %}">ترک بارداری</a></li>
+                      <li><a href="{% url 'products:product-filter' 'crack-cream' 3 %}">کرم ترک</a></li>
+                      <li><a href="{% url 'products:product-filter' 'crack-gel' 3 %}">ژل ترک</a></li>
+                      <li><a href="{% url 'products:product-filter' 'crack-lotion' 3 %}">لوسیون ترک</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'nail' 2 %}">ناخن</a></li>
+                      <li><a href="{% url 'products:product-filter' 'repair-nail-dilution' 3 %}">محلول ترمیم کننده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'repair-nail-cream' 3 %}">کرم ترمیم کننده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'repair-nail-oil' 3 %}">روغن ترمیم کننده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'repair-nail-spray' 3 %}">اسپری ترمیم کننده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'repair-nail-lac' 3 %}">لاک ترمیم کننده</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'lip' 2 %}">لب</a></li>
+                      <li><a href="{% url 'products:product-filter' 'repair-balm-lip' 3 %}">بوم لب</a></li>
+                      <li><a href="{% url 'products:product-filter' 'repair-stick-lip' 3 %}">استیک لب</a></li>
+                      <li><a href="{% url 'products:product-filter' 'repair-cream-lip' 3 %}">کرم لب</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--#end of single divmenu3-->
+            </li>
+            <li class="nav-item mx-2" data-timer="7">
+              <a href="{% url 'products:product-filter' 'hair-care' 1 %}" class="nav-link">مراقبت مو</a>
+              <!--single divmenu3-->
+              <div class="container menuLevel3">
+                <div class="row">
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'shampoo' 2 %}">شامپو</a></li>
+                      <li><a href="{% url 'products:product-filter' 'shampoo-greasy-hair' 3 %}">شامپو موی چرب</a></li>
+                      <li><a href="{% url 'products:product-filter' 'shampoo-normal-hair' 3 %}">شامپو موی معمولی</a></li>
+                      <li><a href="{% url 'products:product-filter' 'shampoo-dry-hair' 3 %}">شامپو موی خشک و آسیب دیده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'shampoo-keratin' 3 %}">شامپو کراتینه</a></li>
+                      <li><a href="{% url 'products:product-filter' 'shampoo-after-keratin' 3 %}">شامپو موی کراتینه شده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'shampoo-colored-hair' 3 %}">شامپو موی رنگ شده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'shampoo-volumizing' 3 %}">شامپو حجم دهنده مو</a></li>
+                      <li><a href="{% url 'products:product-filter' 'shampoo-shampoo-anti-dandruff' 3 %}">شامپو ضدشوره</a></li>
+                      <li><a href="{% url 'products:product-filter' 'shampoo-split-end' 3 %}">شامپو ضد وز و مو خوره</a></li>
+                      <li><a href="{% url 'products:product-filter' 'shampoo-anti-hair-loss' 3 %}">شامپو ضدریزش و تقویتی</a></li>
+                      <li><a href="{% url 'products:product-filter' 'shampoo-curly-hair' 3 %}">شامپو موی فر و مجعد</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'conditioner-shampoo' 2 %}">نرم کننده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'conditioner-normal-hair' 3 %}">نرم کننده موی معمولی</a></li>
+                      <li><a href="{% url 'products:product-filter' 'conditioner-anti-hair-loss' 3 %}">نرم کننده ضدریزش</a></li>
+                      <li><a href="{% url 'products:product-filter' 'conditioner-dry-hair' 3 %}">نرم کننده مو خشک</a></li>
+                      <li><a href="{% url 'products:product-filter' 'conditioner-colored-hair' 3 %}">نرم کننده موی رنگ شده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'conditioner-split-end-hair' 3 %}">نرم کننده موی وز</a></li>
+                    </ul>
+                    <ul class="subMenu4 mt-2">
+                      <li><a href="{% url 'products:product-filter' 'hair-styler' 2 %}">حالت دهنده مو</a></li>
+                      <li><a href="{% url 'products:product-filter' 'hair-styler-spray' 3 %}">اسپری حالت دهنده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'hair-styler-gel' 3 %}">ژل مو</a></li>
+                      <li><a href="{% url 'products:product-filter' 'hair-styler-wax' 3 %}">واکس و چسب مو</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'hair-mask' 2 %}">ماسک مو</a></li>
+                      <li><a href="{% url 'products:product-filter' 'mask-dry-hair' 3 %}">ماسک موی خشک و آسیب دیده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'mask-colored-hair' 3 %}">ماسک موی رنگ شده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'mask-boosting' 3 %}">ماسک تقویتی</a></li>
+                      <li><a href="{% url 'products:product-filter' 'mask-keratin' 3 %}">ماسک کراتینه</a></li>
+                    </ul>
+                    <ul class="subMenu4 mt-2">
+                      <li><a href="{% url 'products:product-filter' 'hair-serum' 2 %}">سرم مو</a></li>
+                      <li><a href="{% url 'products:product-filter' 'serum-dry-hair' 3 %}">سرم موی خشک و آسیب دیده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'serum-split-end-hair' 3 %}">سرم موی وز</a></li>
+                      <li><a href="{% url 'products:product-filter' 'serum-colored-hair' 3 %}">سرم موی رنگ شده</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'hair-tonic' 2 %}">محلولها و تونیکهای ضدریزش مو</a></li>
+                    </ul>
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'anti-lice-shampoo' 2 %}">شامپو ضد شپش</a></li>
+                    </ul>
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'eyebrows-eyelashes' 2 %}">تقویت کننده ابرو و مژه</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--end of single divmenu3-->
+            </li>
+            <li class="nav-item mx-2" data-timer="8">
+              <a href="{% url 'products:product-filter' 'body-hygiene' 1 %}" class="nav-link">بهداشت بدن</a>
+              <!--single divmenu3-->
+              <div class="container menuLevel3">
+                <div class="row">
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'freshener-men' 2 %}">خوشبو کننده بدن آقایان</a></li>
+                      <li><a href="{% url 'products:product-filter' 'spray-body-men' 3 %}">اسپری بدن</a></li>
+                      <li><a href="{% url 'products:product-filter' 'deodorant-men' 3 %}">مام</a></li>
+                      <li><a href="{% url 'products:product-filter' 'body-splash-men' 3 %}">بادی اسپلش</a></li>
+                    </ul>
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'freshener-women' 2 %}">خوشبو کننده بدن بانوان</a></li>
+                      <li><a href="{% url 'products:product-filter' 'spray-body-women' 3 %}">اسپری بدن</a></li>
+                      <li><a href="{% url 'products:product-filter' 'deodorant-women' 3 %}">مام</a></li>
+                      <li><a href="{% url 'products:product-filter' 'body-splash-women' 3 %}">بادی اسپلش</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'shaving' 2 %}">اصلاح صورت و بدن</a></li>
+                      <li><a href="{% url 'products:product-filter' 'shaving-cream' 3 %}">کرم مو بر</a></li>
+                      <li><a href="{% url 'products:product-filter' 'shaving-spray' 3 %}">اسپری مو بر</a></li>
+                      <li><a href="{% url 'products:product-filter' 'razor' 3 %}">ریش تراش</a></li>
+                      <li><a href="{% url 'products:product-filter' 'after-shave' 3 %}">بعد از اصلاح</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--end of single divmenu3-->
+            </li>
+            <li class="nav-item mx-2" data-timer="9">
+              <a href="{% url 'products:product-filter' 'oral-hygiene' 1 %}" class="nav-link">بهداشت دهان و دندان</a>
+              <!--single divmenu3-->
+              <div class="container menuLevel3">
+                <div class="row">
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'toothpaste' 2 %}">خمیر دندان</a></li>
+                      <li><a href="{% url 'products:product-filter' 'whitening' 3 %}">سفیدکننده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'anti-decay' 3 %}">ضد پوسیدگی</a></li>
+                      <li><a href="{% url 'products:product-filter' 'sensitive-teeth' 3 %}">دندان حساس</a></li>
+                      <li><a href="{% url 'products:product-filter' 'toothpaste-kids' 3 %}">کودکان</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'toothbrush' 2 %}">مسواک</a></li>
+                      <li><a href="{% url 'products:product-filter' 'toothbrush-normal' 3 %}">ساده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'toothbrush-orthodontic' 3 %}">ارتودنسی</a></li>
+                      <li><a href="{% url 'products:product-filter' 'toothbrush-interdental' 3 %}">بین دندانی</a></li>
+                      <li><a href="{% url 'products:product-filter' 'toothbrush-electric' 3 %}">برقی</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'dental-floss' 2 %}">نخ دندان</a></li>
+                      <li><a href="{% url 'products:product-filter' 'dental-floss-normal' 3 %}">ساده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'dental-floss-orthodontic' 3 %}">ارتودنسی</a></li>
+                    </ul>
+                    <ul class="subMenu4 mt-2">
+                      <li><a href="{% url 'products:product-filter' 'mouthwash' 2 %}">دهان شویه</a></li>
+                      <li><a href="{% url 'products:product-filter' 'mouthwash-adult' 3 %}">بزرگسال</a></li>
+                      <li><a href="{% url 'products:product-filter' 'mouthwash-kids' 3 %}">کودکان</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'tooth-glue' 2 %}">چسب دندان مصنوعی</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--end of single divmenu3-->
+            </li>
+            <li class="nav-item mx-2" data-timer="10">
+              <a href="{% url 'products:product-filter' 'makeup' 1 %}" class="nav-link">آرایشی</a>
+              <!--single divmenu3-->
+              <div class="container menuLevel3">
+                <div class="row">
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'makeup-face' 2 %}">صورت</a></li>
+                      <li><a href="{% url 'products:product-filter' 'primer' 3 %}">پرایمر</a></li>
+                      <li><a href="{% url 'products:product-filter' 'foundation' 3 %}">کرم پودر</a></li>
+                      <li><a href="{% url 'products:product-filter' 'face-powder' 3 %}">پنکیک</a></li>
+                      <li><a href="{% url 'products:product-filter' 'blush' 3 %}">رژ گونه</a></li>
+                      <li><a href="{% url 'products:product-filter' 'contour' 3 %}">کانتور</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'makeup-eye' 2 %}">چشم و ابرو</a></li>
+                      <li><a href="{% url 'products:product-filter' 'eyeliner' 3 %}">مداد چشم</a></li>
+                      <li><a href="{% url 'products:product-filter' 'mascara' 3 %}">ریمل مژه</a></li>
+                      <li><a href="{% url 'products:product-filter' 'eyebrow-pencil' 3 %}">ریمل، سایه و مداد ابرو</a></li>
+                      <li><a href="{% url 'products:product-filter' 'eye-shadow' 3 %}">سایه چشم</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'makeup-lip' 2 %}">لب</a></li>
+                      <li><a href="{% url 'products:product-filter' 'lipstick' 3 %}">رژ لب</a></li>
+                      <li><a href="{% url 'products:product-filter' 'lip-gloss' 3 %}">برق لب</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--end of single divmenu3-->
+            </li>
+            <li class="nav-item mx-2" data-timer="11">
+              <a href="{% url 'products:product-filter' 'hygiene' 1 %}" class="nav-link">بهداشتی</a>
+              <!--single divmenu3-->
+              <div class="container menuLevel3">
+                <div class="row">
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'disinfectants' 2 %}">ضدعفونی کننده</a></li>
+                      <li><a href="{% url 'products:product-filter' 'soap' 3 %}">صابون</a></li>
+                      <li><a href="{% url 'products:product-filter' 'hand-wash' 3 %}">مایع دستشوئی</a></li>
+                      <li><a href="{% url 'products:product-filter' 'disinfectants-dilution' 3 %}">محلول ضدعفونی کننده</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-3">
+                    <ul class="subMenu4">
+                      <li><a href="{% url 'products:product-filter' 'women-sanitation' 2 %}">بانوان</a></li>
+                      <li><a href="{% url 'products:product-filter' 'hygienic-pad' 3 %}">پد بهداشتی</a></li>
+                      <li><a href="{% url 'products:product-filter' 'wipes' 3 %}">دستمال مرطوب</a></li>
+                      <li><a href="{% url 'products:product-filter' 'hygienic-gel' 3 %}">ژل بهداشتی بانوان</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--end of single divmenu3-->
+            </li>
+          </ul>
+          <!--end of single submenu-->
+        </li>
+        <li class="nav-item mx-3" data-timer="12">
+          <a href="{% url 'products:product-filter' 'food-supplement' 0 %}" class="nav-link">مکمل غذایی<i class="fa fa-angle-down"></i></a>
+          <!--single submenu-->
+          <ul class="navbar-nav menuLevel2">
+            <li class="nav-item mx-2">
+              <a href="{% url 'products:product-filter' 'men-supplement' 1 %}" class="nav-link">مکمل آقایان</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="{% url 'products:product-filter' 'women-supplement' 1 %}" class="nav-link">مکمل بانوان</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="{% url 'products:product-filter' 'kids-supplement' 1 %}" class="nav-link">مکمل کودکان</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="{% url 'products:product-filter' 'herbal-supplement' 1 %}" class="nav-link">مکمل گیاهی</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="{% url 'products:product-filter' 'vitamin-mineral' 1 %}" class="nav-link">ویتامینها و مواد معدنی</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="{% url 'products:product-filter' 'weight-control-supplement' 1 %}" class="nav-link">مکمل تنظیم وزن</a>
+            </li>
+          </ul>
+          <!--end of single submenu-->
+        </li>
+        <li class="nav-item mx-3" data-timer="13">
+          <a href="{% url 'products:product-filter' 'sport-supplement' 0 %}" class="nav-link">مکمل ورزشی<i class="fa fa-angle-down"></i></a>
+          <!--single submenu-->
+          <ul class="navbar-nav menuLevel2">
+            <li class="nav-item mx-2">
+              <a href="{% url 'products:product-filter' 'protein-supplement' 1 %}" class="nav-link">پروتئین</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="{% url 'products:product-filter' 'carbohydrate-supplement' 1 %}" class="nav-link">کربوهیدرات</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="{% url 'products:product-filter' 'amino-acid-supplements' 1 %}" class="nav-link">آمینواسید</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="{% url 'products:product-filter' 'weight-loss-supplement' 1 %}" class="nav-link">کاهش وزن</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="{% url 'products:product-filter' 'creatine-supplement' 1 %}" class="nav-link">کراتین</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="{% url 'products:product-filter' 'energy-supplement' 1 %}" class="nav-link">انرژی زا</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="{% url 'products:product-filter' 'bcaa-supplement' 1 %}" class="nav-link">بی سی ای ای</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="{% url 'products:product-filter' 'glutamine-supplement' 1 %}" class="nav-link">گلوتامین</a>
+            </li>
+          </ul>
+          <!--end of single submenu-->
+        </li>
+        <li class="nav-item mx-3" data-timer="14">
+          <a href="{% url 'products:product-filter' 'mother-baby' 0 %}" class="nav-link">مادر و کودک<i class="fa fa-angle-down"></i></a>
+          <!--single submenu-->
+          <ul class="navbar-nav menuLevel2">
+            <li class="nav-item mx-2">
+              <a href="{% url 'products:product-filter' 'pregnancy' 1 %}" class="nav-link">مادر و بارداری</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="{% url 'products:product-filter' 'breastfeeding' 1 %}" class="nav-link">دوران شیردهی</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="{% url 'products:product-filter' 'kids-milkpowder-food' 1 %}" class="nav-link">شیرخشک و غذای کودک</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="{% url 'products:product-filter' 'infant-accessories' 1 %}" class="nav-link">لوازم کودک و نوزاد</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="{% url 'products:product-filter' 'mother-aftercare-supplement' 1 %}" class="nav-link">مکمل مادران</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="{% url 'products:product-filter' 'infant-supplement' 1 %}" class="nav-link">مکمل کودکان</a>
+            </li>
+          </ul>
+          <!--end of single submenu-->
+        </li>
+        <li class="nav-item mx-3" data-timer="15">
+          <a href="{% url 'products:product-filter' 'medical-equipment' 0 %}" class="nav-link">تجهیزات پزشکی<i class="fa fa-angle-down"></i></a>
+          <!--single submenu-->
+          <ul class="navbar-nav menuLevel2">
+            <li class="nav-item mx-2">
+              <a href="{% url 'products:product-filter' 'body-equipment' 1 %}" class="nav-link">تجهیزات پزشکی بدن</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="{% url 'products:product-filter' 'diabetes-equipment' 1 %}" class="nav-link">تجهیزات قند خون</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="{% url 'products:product-filter' 'thermometer' 1 %}" class="nav-link">تب سنج و دماسنج</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="{% url 'products:product-filter' 'weight-scale' 1 %}" class="nav-link">ترازو</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a href="{% url 'products:product-filter' 'orthopedic' 1 %}" class="nav-link">ارتوپدی</a>
+            </li>
+          </ul>
+          <!--end of single submenu-->
+        </li>
+      </ul>
+    </div>
+  </nav>

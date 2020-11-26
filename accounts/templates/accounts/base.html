@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yas Daru</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'accounts/css/styleLogin.css' %}">
+  <script src="{% static 'website/js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'website/js/jquery.min.js' %}"></script>
+  <script src="{% static 'website/js/popper.min.js' %}"></script>
+  <script src="{% static 'website/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'website/js/main.js' %}"></script>
+  <script src="https://kit.fontawesome.com/594614f60b.js"></script>
+    <style>
+    @font-face{
+  font-family: 'yekan';
+  src: url('{% static "website/fonts/yekan-font/Yekan.ttf" %}') format('truetype'),
+       url('{% static "website/fonts/yekan-font/Yekan.eot" %}') format('embedded-opentype');
+}
+</style>
+</head>
+<body>
+
+{% include 'snippets/messages.html' %}
+{% block content %}
+
+{% endblock %}
+
+</body>
+</html>

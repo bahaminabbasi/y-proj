@@ -1,0 +1,46 @@
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+  <!--###Tables###-->
+  <section id="tables1">
+    <div class="container-fluid">
+      <div class="row mb-5">
+        <div class="col-xl-10 col-lg-9 col-md-8 mr-auto">
+          <div class="row">
+            <div class="col-12">
+              <h3 class="text-muted text-center mb-3">لیست محصولات</h3>
+            </div>
+            <div class="col-12">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">نام کالا</th>
+                    <th scope="col">تعداد</th>
+                    <th scope="col">تاریخ انتشار</th>
+                    <th scope="col">عملیات</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for product in products %}
+                  <tr>
+                      <th scope="row">{{ forloop.counter }}</th>
+                      <td>{{ product.persian_title }}</td>
+                      <td>{{ product.quantity }}</td>
+                      <td>{{ product.date }}</td>
+                      <td>
+                        <a class="btn btn-success" href="{% url 'dashboard:edit-product' product.pk %}">ویرایش</a> 
+                        <a class="btn btn-danger" href="{% url 'dashboard:delete-product' product.pk %}">حذف</a>
+                      </td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--####End of Tables###-->
+{% endblock %}

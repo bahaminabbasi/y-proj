@@ -1,0 +1,9 @@
+tmp
+.vscode
+A/secret.py
+imported_pip_requirements.txt
+media
+static/dashboard/fonts
+static_files/website/fonts
+static_files/website/img
+static_files/website/css/yekan-font

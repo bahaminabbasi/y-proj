@@ -1,0 +1,34 @@
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+<!--#####Slider Images#####-->
+<section id="sliderImage1">
+  <div class="container-fluid">
+    <div class="row mb-5">
+      <div class="col-xl-10 col-lg-9 col-md-8 mr-auto">
+        <div class="row">
+          <div class="col-12">
+            <h3 class="text-muted text-center mb-3">تصاویر مربوط به اسلایدر بالای صفحه</h3>
+          </div>
+          <div class="col-12">
+            <form>
+                {% for picture in main_pictures %}
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ picture.image.url }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">{{ picture.name }}</h5>
+                        
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
+<!--#####End of Slider Images#####-->
+{% endblock %}

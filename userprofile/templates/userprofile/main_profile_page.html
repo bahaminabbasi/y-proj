@@ -1,0 +1,371 @@
+{% extends 'website/base.html' %}
+{% block content %}
+<!--##Direction of Page##-->
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <ul class="breadcrumb direction">
+        <li class="breadcrumb-item"><a href="#">صفحه نخست</a></li>
+        <li class="breadcrumb-item active">پروفایل کاربری</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--##End of Direction of Page##-->
+
+<!--#####Banner & User Name#####-->
+<div class="container">
+  <div class="U5 mb-2 mr-2 col-12">
+    <div><i class="far fa-user-circle text-muted" style="font-size:4.5rem;"></i></div>
+    <div><p class="name1 mr-3">شماره موبایل: {{ user.phone_number }}</p><a href="{% url 'accounts:logout' %}" class="Exit mr-3"><i class="fas fa-sign-out-alt ml-1"></i>خروج</a></div>
+  </div>
+</div>
+<!--#####End of Banner & User Name###-->
+
+<!--product info-->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="jumbotron j1">
+          <ul class="nav nav-tabs d-flex flex-wrap" role="tablist">
+            <li class="nav-item">
+              <a href="#userInformation" class="nav-link active product-info-link" data-toggle="tab">اطلاعات کاربری</a>
+            </li>
+            <li class="nav-item">
+              <a href="#userAddress" class="nav-link product-info-link" data-toggle="tab">نشانی ها</a>
+            </li>
+            <li class="nav-item">
+              <a href="#userOrders" class="nav-link product-info-link" data-toggle="tab">سفارشات من</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div id="userInformation" class="container tab-pane active">
+              <div class="container mt-2">
+                <div class="row">
+                  <div class="col d-flex info1">
+                    <div class="rightA">
+                      <label for="name1">نام و نام خانوادگی</label>
+                      <p id="name1" class="text-muted pr-1">علی اکبرپور</p>
+                    </div>
+                    <div class="leftA">
+                      <button class="btn" data-toggle="modal" data-target="#editName1"><i class="far fa-edit"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col d-flex info1">
+                    <div class="rightA">
+                      <label for="name1">کد ملی</label>
+                      <p id="name1" class="text-muted pr-1">22800457812</p>
+                    </div>
+                    <div class="leftA">
+                      <button class="btn" data-toggle="modal" data-target="#editMelliCode"><i class="far fa-edit"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="w-100"></div>
+                  <div class="col d-flex info1">
+                    <div class="rightA">
+                      <label for="name1">تلفن همراه</label>
+                      <p id="name1" class="text-muted pr-1">09365521207</p>
+                    </div>
+                    <div class="leftA">
+                      <button class="btn" data-toggle="modal" data-target="#editPhone"><i class="far fa-edit"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col d-flex info1">
+                    <div class="rightA">
+                      <label for="name1">پست الکترونیک</label>
+                      <p id="name1" class="text-muted pr-1">ali.akbari@gmail.com</p>
+                    </div>
+                    <div class="leftA">
+                      <button class="btn" data-toggle="modal" data-target="#editEmail"><i class="far fa-edit"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="w-100"></div>
+                  <div class="col d-flex info1">
+                    <div class="rightA">
+                      <label for="name1">شماره کارت جهت مرجوعی وجه</label>
+                      <p id="name1" class="text-muted pr-1">6221061074487105</p>
+                    </div>
+                    <div class="leftA">
+                      <button class="btn" data-toggle="modal" data-target="#cardNum"><i class="far fa-edit"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col d-flex info1">
+                    <div class="rightA">
+                      <label for="name1">رمز عبور</label>
+                      <p id="name1" class="text-muted pr-1">********</p>
+                    </div>
+                    <div class="leftA">
+                      <button class="btn" data-toggle="modal" data-target="#editCode"><i class="far fa-edit"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="userAddress" class="tab-pane fade">
+              <div class="container mt-2">
+                <div class="container AddressBar">
+                  <p class="mainAdd">منطقه شش، فرهنگشهر، بلوار شهید رجایی، خ فاطمی فرد<span class="delAdd"><button class="btn">حذف نشانی<i class="far fa-trash-alt text-muted mr-1"></i></button></span></p>
+                  <p class="text-muted"><i class="fas fa-map-signs ml-2"></i>فارس، شیراز</p>
+                  <p class="text-muted"><i class="far fa-envelope ml-2"></i>71848354752</p>
+                  <p class="text-muted"><i class="fas fa-phone-alt ml-2"></i>09365520471</p>
+                  <p class="text-muted"><i class="far fa-user ml-2"></i>علی اکبرپور</p>
+                  <a href="#" class="editAdd" data-toggle="modal" data-target="#addAddress2">ویرایش نشانی<i class="fas fa-angle-left mr-1"></i></a>
+                </div>
+                <div class="container addAddress mt-2">
+                  <a href="#" class="addingAdd" data-toggle="modal" data-target="#addAddress2"><i class="fas fa-map-marker-alt ml-2"></i>افزودن نشانی جدید<i class="fas fa-angle-left iLeft1 mr-auto"></i></a>
+                </div>
+              </div>
+            </div>
+            <div id="userOrders" class="tab-pane fade">
+              <div class="container p-2">
+                <p>این یک متن آزمایشی است. محصول کشور فرانسه. تضمین قیمت و اصالت کالا که این محصول را متمایز میکند. این یک متن تست است و صرفا برای آزمایش است. نظرات درباره این کالا مثبت است و مشتریان این محصول رضایت کافی را دارند.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--end of product info-->
+<!--###Modals of User Information###-->
+    <!--###Name and Fname###-->
+<div class="modal fade" id="editName1" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header mH">
+        <h5 class="modal-title" id="ModalLabel">نام و نام خانوادگی</h5>
+        <button type="button" class="btn" data-dismiss="modal" aria-label="Close">
+          <i class="far fa-times-circle"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="uName">نام</label>
+            <input type="text" class="form-control" id="uName">
+          </div>
+          <div class="form-group">
+            <label for="uFname">نام خانوادگی</label>
+            <input type="text" class="form-control" id="uFname">
+          </div>
+          <button type="submit" class="btn btn-primary" style="float:left;">ثبت اطلاعات</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+      <!--###End of Name and Fname###-->
+      <!--###Melli Code###-->
+      <div class="modal fade" id="editMelliCode" aria-labelledby="ModalLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header mH">
+              <h5 class="modal-title" id="ModalLabel1">کد ملی</h5>
+              <button type="button" class="btn" data-dismiss="modal" aria-label="Close">
+                <i class="far fa-times-circle"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <input type="text" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary" style="float:left;">ثبت اطلاعات</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--###End of Melli Code###-->
+      <!--####Edit Phone##-->
+      <div class="modal fade" id="editPhone" aria-labelledby="ModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header mH">
+              <h5 class="modal-title" id="ModalLabel2">شماره تلفن همراه</h5>
+              <button type="button" class="btn" data-dismiss="modal" aria-label="Close">
+                <i class="far fa-times-circle"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <input type="text" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary" style="float:left;">ارسال کد تایید</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--####End of Edit Phone##-->
+      <!--###Edit Email###-->
+      <div class="modal fade" id="editEmail" aria-labelledby="ModalLabel3" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header mH">
+              <h5 class="modal-title" id="ModalLabel3">ایمیل</h5>
+              <button type="button" class="btn" data-dismiss="modal" aria-label="Close">
+                <i class="far fa-times-circle"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <input type="email" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary" style="float:left;">تایید</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--###End of Edit Email###-->
+      <!--###Card Number####-->
+      <div class="modal fade" id="cardNum" aria-labelledby="ModalLabel4" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header mH">
+              <h5 class="modal-title" id="ModalLabel4">شماره کارت</h5>
+              <button type="button" class="btn" data-dismiss="modal" aria-label="Close">
+                <i class="far fa-times-circle"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <input type="text" class="form-control" aria-describedby="num1">
+                  <small id="num1" class="form-text text-muted"><i class="fas fa-exclamation-circle ml-1"></i>جهت مرجوعی وجه خرید، باید شماره کارت حساب بانکی متعلق به خود را وارد کنید.</small>
+                </div>
+                <button type="submit" class="btn btn-primary" style="float:left;">بررسی کارت</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--###End of Card Number####-->
+      <!--####Edit Code###-->
+      <div class="modal fade" id="editCode" aria-labelledby="ModalLabel5" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header mH">
+              <h5 class="modal-title" id="ModalLabel5">ویرایش رمز عبور</h5>
+              <button type="button" class="btn" data-dismiss="modal" aria-label="Close">
+                <i class="far fa-times-circle"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <small id="codeDesc" class="form-text text-muted"><i class="fas fa-exclamation-circle ml-1"></i>رمز عبور باید حداقل ۶ کاراکتر باشد.</small>
+                  <label for="Code1">رمز عبور فعلی</label>
+                  <input type="password" class="form-control" id="Code11" aria-describedby="codeDesc">
+                </div>
+                <div class="form-group">
+                  <label for="Code2">رمز عبور جدید</label>
+                  <input type="password" class="form-control" id="Code2">
+                </div>
+                <div class="form-group">
+                  <label for="Code3">تکرار رمز عبور جدید</label>
+                  <input type="password" class="form-control" id="Code3">
+                </div>
+                <button type="submit" class="btn btn-primary" style="float:left;">ثبت</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--####End of Edit Code##-->
+<!--###End Modals of User Information###-->
+
+<!--###Modals of User Address#####-->
+<div class="modal fade" id="addAddress2" aria-labelledby="mLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header mH">
+        <h5 class="modal-title" id="ModalLabel4">جزئیات آدرس</h5>
+        <button type="button" class="btn" data-dismiss="modal" aria-label="Close">
+          <i class="far fa-times-circle"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputState">استان*</label>
+              <select id="inputState" class="form-control" required>
+                <option selected>تهران</option>
+                <option>فارس</option>
+                <option>بوشهر</option>
+                <option>اهواز</option>
+                <option>اصفهان</option>
+              </select>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputState">شهر*</label>
+              <select id="inputState" class="form-control" required>
+                <option selected>تهران</option>
+                <option>شیراز</option>
+                <option>برازجان</option>
+                <option>اهواز</option>
+                <option>اصفهان</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputAddress">نشانی دقیق*</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="شیراز/بلوار شهید رجایی/کوچه 25/پلاک 8" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-2">
+              <label for="inputCity">پلاک*</label>
+              <input type="text" class="form-control" id="inputCity" required>
+            </div>
+            <div class="form-group col-md-2">
+              <label for="inputCity">واحد</label>
+              <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="form-group col-md-8">
+              <label for="inputZip">کدپستی*</label>
+              <input type="text" class="form-control" id="inputZip" aria-describedby="codeHelp" required>
+              <small id="codeHelp" class="form-text text-muted">کدپستی باید ۱۰ رقم و بدون خط تیره باشد</small>
+            </div>
+          </div>
+          <hr/>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="receiverName">نام گیرنده*</label>
+              <input type="text" class="form-control" id="receiverName" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="receiverLName">نام خانوادگی گیرنده*</label>
+              <input type="text" class="form-control" id="receiverLName" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="idNumber">کدملی گیرنده*</label>
+              <input type="text" class="form-control" id="idNumber" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="phoneNumber">شماره موبایل*</label>
+              <input type="text" class="form-control" id="phoneNumber" required>
+            </div>
+          </div>
+          <hr/>
+          <button type="submit" class="btn btn-danger font-weight-bold">تأیید و ثبت آدرس</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

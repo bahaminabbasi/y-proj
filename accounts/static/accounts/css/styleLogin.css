@@ -1,0 +1,96 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: white;
+  direction: rtl;
+  text-align: right;
+  font-family: Sahel;
+}
+a{
+  text-decoration: none;
+}
+@font-face{
+  font-family: 'Sahel';
+  src: url('yekan-font/Sahel.ttf') format('truetype'),
+       url('yekan-font/Sahel.eot') format('embedded-opentype');
+}
+.font12{font: 12px yekan;}
+.font13{font: 13px yekan;}
+.font14{font: 14px yekan;}
+.font15{font: 15px yekan;}
+.font16{font: 16px yekan;}
+.font17{font: 17px yekan;}
+
+label{
+  font-weight: bold;
+}
+div.card{
+  border: 3px solid #114b5f;
+}
+div.card-header, div.card-footer{
+  background-color: white;
+  color: #1d3354;
+}
+div.card-body{
+  background-color: #88d498;
+}
+div.card-body label{
+  color: #114b5f;
+}
+div.card button{
+  background-color: #114b5f;
+  color: white;
+}
+div.card button:hover{
+  background-color: #277da1;
+  color: white;
+}
+div.card-footer a{
+  color: #277da1;
+}
+#signForm a:hover{
+  text-decoration: none;
+}
+.footer-title{
+  border: 0.2rem solid #114b5f;
+  padding: 0.4rem;
+  color: #114b5f;
+}
+
+
+.bTimer a{
+  color: white;
+  line-height: 0.8rem;
+  text-align: center;
+}
+#time{
+  margin-top: 8px;
+  color: #E63946;
+  width: 70px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: transparent;
+}
+#payam{
+  display: none;
+  margin-top: 17px;
+  color: #E63946;
+  width: 250px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background-color: transparent;
+}
+
+/*####Alert messages########3*/
+.mAlert1{
+  height:60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  direction:rtl;
+}
+.mAlert1 button i{
+  font-size: 1.5rem;
+}
