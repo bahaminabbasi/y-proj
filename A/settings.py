@@ -4,7 +4,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DEBUG = True
 ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = ['yasdaroo.ir', 'www.yasdaroo.ir']
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
