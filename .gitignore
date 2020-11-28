@@ -1,4 +1,8 @@
 tmp
+*.log
+__pycache__
+*.pyc
+*.pot
 .vscode
 A/secret.py
 imported_pip_requirements.txt
