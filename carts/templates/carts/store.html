@@ -12,10 +12,10 @@
             {% for product in cart.products.all %}
                 <div class="PL2">
                 <div class="col-3 col-lg-3 rightImgList d-flex align-items-center">
-                    <img src="{{ product.image.url }}" alt="product" class="img-fluid">
+                    <a href="{{ product.get_absolute_url }}"><img src="{{ product.image_medium.url }}" alt="product" class="img-fluid"></a>
                 </div>
                 <div class="col-9 col-lg-9 topList1">
-                    <h4>{{ product.persian_title }}</h4>
+                  <a href="{{ product.get_absolute_url }}"><h4>{{ product.persian_title }}</h4></a>
                 </div>
                 <div class="col-9 col-lg-9 bottumList1 d-flex align-items-end p-1">
                     <div class="btn-group btn-group-sm" style="direction:ltr;" role="group" aria-label="Basic example">

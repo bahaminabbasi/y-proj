@@ -26,7 +26,7 @@ class Product(models.Model):
     description         = models.ForeignKey(StandardDescription, models.SET_NULL, null=True, blank=True)
 
     image_medium = ImageSpecField(source='image',
-                                  processors=[Thumbnail(200, 100)],
+                                  processors=[Thumbnail(120, 120)],
                                   format='JPEG',
                                   options={'quality': 60})
     image_small = ImageSpecField(source='image',
