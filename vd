@@ -1,0 +1,279 @@
+[1mdiff --git a/A/__pycache__/__init__.cpython-38.pyc b/A/__pycache__/__init__.cpython-38.pyc[m
+[1mindex fb45cf5..a058c9a 100644[m
+Binary files a/A/__pycache__/__init__.cpython-38.pyc and b/A/__pycache__/__init__.cpython-38.pyc differ
+[1mdiff --git a/A/__pycache__/dateconverter.cpython-38.pyc b/A/__pycache__/dateconverter.cpython-38.pyc[m
+[1mindex 85a5afb..d534444 100644[m
+Binary files a/A/__pycache__/dateconverter.cpython-38.pyc and b/A/__pycache__/dateconverter.cpython-38.pyc differ
+[1mdiff --git a/A/__pycache__/secret.cpython-38.pyc b/A/__pycache__/secret.cpython-38.pyc[m
+[1mindex 23221c6..b039d52 100644[m
+Binary files a/A/__pycache__/secret.cpython-38.pyc and b/A/__pycache__/secret.cpython-38.pyc differ
+[1mdiff --git a/A/__pycache__/settings.cpython-38.pyc b/A/__pycache__/settings.cpython-38.pyc[m
+[1mindex b95edb8..74653ff 100644[m
+Binary files a/A/__pycache__/settings.cpython-38.pyc and b/A/__pycache__/settings.cpython-38.pyc differ
+[1mdiff --git a/A/__pycache__/urls.cpython-38.pyc b/A/__pycache__/urls.cpython-38.pyc[m
+[1mindex 72010fe..7bdb092 100644[m
+Binary files a/A/__pycache__/urls.cpython-38.pyc and b/A/__pycache__/urls.cpython-38.pyc differ
+[1mdiff --git a/A/__pycache__/utils.cpython-38.pyc b/A/__pycache__/utils.cpython-38.pyc[m
+[1mindex 11c41d0..7316b1f 100644[m
+Binary files a/A/__pycache__/utils.cpython-38.pyc and b/A/__pycache__/utils.cpython-38.pyc differ
+[1mdiff --git a/A/__pycache__/wsgi.cpython-38.pyc b/A/__pycache__/wsgi.cpython-38.pyc[m
+[1mindex 1b5a475..936659b 100644[m
+Binary files a/A/__pycache__/wsgi.cpython-38.pyc and b/A/__pycache__/wsgi.cpython-38.pyc differ
+[1mdiff --git a/accounts/__pycache__/__init__.cpython-38.pyc b/accounts/__pycache__/__init__.cpython-38.pyc[m
+[1mindex 84cab2c..73dfe0b 100644[m
+Binary files a/accounts/__pycache__/__init__.cpython-38.pyc and b/accounts/__pycache__/__init__.cpython-38.pyc differ
+[1mdiff --git a/accounts/__pycache__/admin.cpython-38.pyc b/accounts/__pycache__/admin.cpython-38.pyc[m
+[1mindex f51d872..903754a 100644[m
+Binary files a/accounts/__pycache__/admin.cpython-38.pyc and b/accounts/__pycache__/admin.cpython-38.pyc differ
+[1mdiff --git a/accounts/__pycache__/apps.cpython-38.pyc b/accounts/__pycache__/apps.cpython-38.pyc[m
+[1mindex 3969f42..8ad3ecf 100644[m
+Binary files a/accounts/__pycache__/apps.cpython-38.pyc and b/accounts/__pycache__/apps.cpython-38.pyc differ
+[1mdiff --git a/accounts/__pycache__/forms.cpython-38.pyc b/accounts/__pycache__/forms.cpython-38.pyc[m
+[1mindex 53124d8..4344d6e 100644[m
+Binary files a/accounts/__pycache__/forms.cpython-38.pyc and b/accounts/__pycache__/forms.cpython-38.pyc differ
+[1mdiff --git a/accounts/__pycache__/managers.cpython-38.pyc b/accounts/__pycache__/managers.cpython-38.pyc[m
+[1mindex f018b02..2d17ec0 100644[m
+Binary files a/accounts/__pycache__/managers.cpython-38.pyc and b/accounts/__pycache__/managers.cpython-38.pyc differ
+[1mdiff --git a/accounts/__pycache__/models.cpython-38.pyc b/accounts/__pycache__/models.cpython-38.pyc[m
+[1mindex 0c17c90..af0e339 100644[m
+Binary files a/accounts/__pycache__/models.cpython-38.pyc and b/accounts/__pycache__/models.cpython-38.pyc differ
+[1mdiff --git a/accounts/__pycache__/urls.cpython-38.pyc b/accounts/__pycache__/urls.cpython-38.pyc[m
+[1mindex 674b628..cab6019 100644[m
+Binary files a/accounts/__pycache__/urls.cpython-38.pyc and b/accounts/__pycache__/urls.cpython-38.pyc differ
+[1mdiff --git a/accounts/__pycache__/utils.cpython-38.pyc b/accounts/__pycache__/utils.cpython-38.pyc[m
+[1mindex 01dba7d..9b499af 100644[m
+Binary files a/accounts/__pycache__/utils.cpython-38.pyc and b/accounts/__pycache__/utils.cpython-38.pyc differ
+[1mdiff --git a/accounts/__pycache__/views.cpython-38.pyc b/accounts/__pycache__/views.cpython-38.pyc[m
+[1mindex 80cdc6c..d422bb9 100644[m
+Binary files a/accounts/__pycache__/views.cpython-38.pyc and b/accounts/__pycache__/views.cpython-38.pyc differ
+[1mdiff --git a/accounts/migrations/__pycache__/0001_initial.cpython-38.pyc b/accounts/migrations/__pycache__/0001_initial.cpython-38.pyc[m
+[1mindex 4f6bb8f..eff3c39 100644[m
+Binary files a/accounts/migrations/__pycache__/0001_initial.cpython-38.pyc and b/accounts/migrations/__pycache__/0001_initial.cpython-38.pyc differ
+[1mdiff --git a/accounts/migrations/__pycache__/__init__.cpython-38.pyc b/accounts/migrations/__pycache__/__init__.cpython-38.pyc[m
+[1mindex ac3abbd..eed0710 100644[m
+Binary files a/accounts/migrations/__pycache__/__init__.cpython-38.pyc and b/accounts/migrations/__pycache__/__init__.cpython-38.pyc differ
+[1mdiff --git a/address/__pycache__/__init__.cpython-38.pyc b/address/__pycache__/__init__.cpython-38.pyc[m
+[1mindex 05d4a16..7376cd2 100644[m
+Binary files a/address/__pycache__/__init__.cpython-38.pyc and b/address/__pycache__/__init__.cpython-38.pyc differ
+[1mdiff --git a/address/__pycache__/admin.cpython-38.pyc b/address/__pycache__/admin.cpython-38.pyc[m
+[1mindex 073689d..794031b 100644[m
+Binary files a/address/__pycache__/admin.cpython-38.pyc and b/address/__pycache__/admin.cpython-38.pyc differ
+[1mdiff --git a/address/__pycache__/apps.cpython-38.pyc b/address/__pycache__/apps.cpython-38.pyc[m
+[1mindex 246cbb4..e7945c3 100644[m
+Binary files a/address/__pycache__/apps.cpython-38.pyc and b/address/__pycache__/apps.cpython-38.pyc differ
+[1mdiff --git a/address/__pycache__/models.cpython-38.pyc b/address/__pycache__/models.cpython-38.pyc[m
+[1mindex 8320f21..204fd7a 100644[m
+Binary files a/address/__pycache__/models.cpython-38.pyc and b/address/__pycache__/models.cpython-38.pyc differ
+[1mdiff --git a/address/__pycache__/urls.cpython-38.pyc b/address/__pycache__/urls.cpython-38.pyc[m
+[1mindex 69ab9cb..dc9b0fe 100644[m
+Binary files a/address/__pycache__/urls.cpython-38.pyc and b/address/__pycache__/urls.cpython-38.pyc differ
+[1mdiff --git a/address/__pycache__/views.cpython-38.pyc b/address/__pycache__/views.cpython-38.pyc[m
+[1mindex 9ec896b..b213111 100644[m
+Binary files a/address/__pycache__/views.cpython-38.pyc and b/address/__pycache__/views.cpython-38.pyc differ
+[1mdiff --git a/address/migrations/__pycache__/__init__.cpython-38.pyc b/address/migrations/__pycache__/__init__.cpython-38.pyc[m
+[1mindex eeb4e27..ef90df7 100644[m
+Binary files a/address/migrations/__pycache__/__init__.cpython-38.pyc and b/address/migrations/__pycache__/__init__.cpython-38.pyc differ
+[1mdiff --git a/carts/__pycache__/__init__.cpython-38.pyc b/carts/__pycache__/__init__.cpython-38.pyc[m
+[1mindex a20bfba..ce10879 100644[m
+Binary files a/carts/__pycache__/__init__.cpython-38.pyc and b/carts/__pycache__/__init__.cpython-38.pyc differ
+[1mdiff --git a/carts/__pycache__/admin.cpython-38.pyc b/carts/__pycache__/admin.cpython-38.pyc[m
+[1mindex 85cfba7..3f0da8f 100644[m
+Binary files a/carts/__pycache__/admin.cpython-38.pyc and b/carts/__pycache__/admin.cpython-38.pyc differ
+[1mdiff --git a/carts/__pycache__/apps.cpython-38.pyc b/carts/__pycache__/apps.cpython-38.pyc[m
+[1mindex fba3075..bd8d28f 100644[m
+Binary files a/carts/__pycache__/apps.cpython-38.pyc and b/carts/__pycache__/apps.cpython-38.pyc differ
+[1mdiff --git a/carts/__pycache__/models.cpython-38.pyc b/carts/__pycache__/models.cpython-38.pyc[m
+[1mindex 9e1e71a..e17333c 100644[m
+Binary files a/carts/__pycache__/models.cpython-38.pyc and b/carts/__pycache__/models.cpython-38.pyc differ
+[1mdiff --git a/carts/__pycache__/urls.cpython-38.pyc b/carts/__pycache__/urls.cpython-38.pyc[m
+[1mindex c3857b6..291cd6f 100644[m
+Binary files a/carts/__pycache__/urls.cpython-38.pyc and b/carts/__pycache__/urls.cpython-38.pyc differ
+[1mdiff --git a/carts/__pycache__/views.cpython-38.pyc b/carts/__pycache__/views.cpython-38.pyc[m
+[1mindex 70560a7..0de033b 100644[m
+Binary files a/carts/__pycache__/views.cpython-38.pyc and b/carts/__pycache__/views.cpython-38.pyc differ
+[1mdiff --git a/carts/migrations/__pycache__/0001_initial.cpython-38.pyc b/carts/migrations/__pycache__/0001_initial.cpython-38.pyc[m
+[1mindex 1116ba5..7bd8c03 100644[m
+Binary files a/carts/migrations/__pycache__/0001_initial.cpython-38.pyc and b/carts/migrations/__pycache__/0001_initial.cpython-38.pyc differ
+[1mdiff --git a/carts/migrations/__pycache__/__init__.cpython-38.pyc b/carts/migrations/__pycache__/__init__.cpython-38.pyc[m
+[1mindex 634cbb4..062aaf9 100644[m
+Binary files a/carts/migrations/__pycache__/__init__.cpython-38.pyc and b/carts/migrations/__pycache__/__init__.cpython-38.pyc differ
+[1mdiff --git a/dashboard/__pycache__/__init__.cpython-38.pyc b/dashboard/__pycache__/__init__.cpython-38.pyc[m
+[1mindex 426bca1..8a2a918 100644[m
+Binary files a/dashboard/__pycache__/__init__.cpython-38.pyc and b/dashboard/__pycache__/__init__.cpython-38.pyc differ
+[1mdiff --git a/dashboard/__pycache__/admin.cpython-38.pyc b/dashboard/__pycache__/admin.cpython-38.pyc[m
+[1mindex 9cbd73b..abb3d2e 100644[m
+Binary files a/dashboard/__pycache__/admin.cpython-38.pyc and b/dashboard/__pycache__/admin.cpython-38.pyc differ
+[1mdiff --git a/dashboard/__pycache__/apps.cpython-38.pyc b/dashboard/__pycache__/apps.cpython-38.pyc[m
+[1mindex 7815f55..f77c085 100644[m
+Binary files a/dashboard/__pycache__/apps.cpython-38.pyc and b/dashboard/__pycache__/apps.cpython-38.pyc differ
+[1mdiff --git a/dashboard/__pycache__/forms.cpython-38.pyc b/dashboard/__pycache__/forms.cpython-38.pyc[m
+[1mindex 91247ec..f34d0b1 100644[m
+Binary files a/dashboard/__pycache__/forms.cpython-38.pyc and b/dashboard/__pycache__/forms.cpython-38.pyc differ
+[1mdiff --git a/dashboard/__pycache__/models.cpython-38.pyc b/dashboard/__pycache__/models.cpython-38.pyc[m
+[1mindex 75fdf1f..e7e29c7 100644[m
+Binary files a/dashboard/__pycache__/models.cpython-38.pyc and b/dashboard/__pycache__/models.cpython-38.pyc differ
+[1mdiff --git a/dashboard/__pycache__/urls.cpython-38.pyc b/dashboard/__pycache__/urls.cpython-38.pyc[m
+[1mindex 6bd3199..dc7d1f0 100644[m
+Binary files a/dashboard/__pycache__/urls.cpython-38.pyc and b/dashboard/__pycache__/urls.cpython-38.pyc differ
+[1mdiff --git a/dashboard/__pycache__/views.cpython-38.pyc b/dashboard/__pycache__/views.cpython-38.pyc[m
+[1mindex 9fe8162..9d4d55c 100644[m
+Binary files a/dashboard/__pycache__/views.cpython-38.pyc and b/dashboard/__pycache__/views.cpython-38.pyc differ
+[1mdiff --git a/dashboard/migrations/__pycache__/__init__.cpython-38.pyc b/dashboard/migrations/__pycache__/__init__.cpython-38.pyc[m
+[1mindex 75db59f..1b14600 100644[m
+Binary files a/dashboard/migrations/__pycache__/__init__.cpython-38.pyc and b/dashboard/migrations/__pycache__/__init__.cpython-38.pyc differ
+[1mdiff --git a/db.sqlite3 b/db.sqlite3[m
+[1mindex be21583..7b67ad9 100644[m
+Binary files a/db.sqlite3 and b/db.sqlite3 differ
+[1mdiff --git a/iteminfo/__pycache__/__init__.cpython-38.pyc b/iteminfo/__pycache__/__init__.cpython-38.pyc[m
+[1mindex 1c33777..5c15bba 100644[m
+Binary files a/iteminfo/__pycache__/__init__.cpython-38.pyc and b/iteminfo/__pycache__/__init__.cpython-38.pyc differ
+[1mdiff --git a/iteminfo/__pycache__/admin.cpython-38.pyc b/iteminfo/__pycache__/admin.cpython-38.pyc[m
+[1mindex 860ef8a..9f60a8f 100644[m
+Binary files a/iteminfo/__pycache__/admin.cpython-38.pyc and b/iteminfo/__pycache__/admin.cpython-38.pyc differ
+[1mdiff --git a/iteminfo/__pycache__/apps.cpython-38.pyc b/iteminfo/__pycache__/apps.cpython-38.pyc[m
+[1mindex 487a8a5..5ed7e1d 100644[m
+Binary files a/iteminfo/__pycache__/apps.cpython-38.pyc and b/iteminfo/__pycache__/apps.cpython-38.pyc differ
+[1mdiff --git a/iteminfo/__pycache__/models.cpython-38.pyc b/iteminfo/__pycache__/models.cpython-38.pyc[m
+[1mindex 80e877c..da95115 100644[m
+Binary files a/iteminfo/__pycache__/models.cpython-38.pyc and b/iteminfo/__pycache__/models.cpython-38.pyc differ
+[1mdiff --git a/iteminfo/migrations/__pycache__/0001_initial.cpython-38.pyc b/iteminfo/migrations/__pycache__/0001_initial.cpython-38.pyc[m
+[1mindex f3afb55..f437c31 100644[m
+Binary files a/iteminfo/migrations/__pycache__/0001_initial.cpython-38.pyc and b/iteminfo/migrations/__pycache__/0001_initial.cpython-38.pyc differ
+[1mdiff --git a/iteminfo/migrations/__pycache__/0002_subcategory.cpython-38.pyc b/iteminfo/migrations/__pycache__/0002_subcategory.cpython-38.pyc[m
+[1mindex 632bcce..427b3a7 100644[m
+Binary files a/iteminfo/migrations/__pycache__/0002_subcategory.cpython-38.pyc and b/iteminfo/migrations/__pycache__/0002_subcategory.cpython-38.pyc differ
+[1mdiff --git a/iteminfo/migrations/__pycache__/0003_auto_20200926_0759.cpython-38.pyc b/iteminfo/migrations/__pycache__/0003_auto_20200926_0759.cpython-38.pyc[m
+[1mindex 1aaa1b8..7e7e2aa 100644[m
+Binary files a/iteminfo/migrations/__pycache__/0003_auto_20200926_0759.cpython-38.pyc and b/iteminfo/migrations/__pycache__/0003_auto_20200926_0759.cpython-38.pyc differ
+[1mdiff --git a/iteminfo/migrations/__pycache__/0004_auto_20200926_1209.cpython-38.pyc b/iteminfo/migrations/__pycache__/0004_auto_20200926_1209.cpython-38.pyc[m
+[1mindex d3e5239..c87df79 100644[m
+Binary files a/iteminfo/migrations/__pycache__/0004_auto_20200926_1209.cpython-38.pyc and b/iteminfo/migrations/__pycache__/0004_auto_20200926_1209.cpython-38.pyc differ
+[1mdiff --git a/iteminfo/migrations/__pycache__/0005_auto_20200927_0729.cpython-38.pyc b/iteminfo/migrations/__pycache__/0005_auto_20200927_0729.cpython-38.pyc[m
+[1mindex 2ea2219..feef8ee 100644[m
+Binary files a/iteminfo/migrations/__pycache__/0005_auto_20200927_0729.cpython-38.pyc and b/iteminfo/migrations/__pycache__/0005_auto_20200927_0729.cpython-38.pyc differ
+[1mdiff --git a/iteminfo/migrations/__pycache__/0006_auto_20201027_0913.cpython-38.pyc b/iteminfo/migrations/__pycache__/0006_auto_20201027_0913.cpython-38.pyc[m
+[1mindex 8953604..0ccb64e 100644[m
+Binary files a/iteminfo/migrations/__pycache__/0006_auto_20201027_0913.cpython-38.pyc and b/iteminfo/migrations/__pycache__/0006_auto_20201027_0913.cpython-38.pyc differ
+[1mdiff --git a/iteminfo/migrations/__pycache__/0007_subcategory_nesting_level.cpython-38.pyc b/iteminfo/migrations/__pycache__/0007_subcategory_nesting_level.cpython-38.pyc[m
+[1mindex ee0a7af..ffd8ba6 100644[m
+Binary files a/iteminfo/migrations/__pycache__/0007_subcategory_nesting_level.cpython-38.pyc and b/iteminfo/migrations/__pycache__/0007_subcategory_nesting_level.cpython-38.pyc differ
+[1mdiff --git a/iteminfo/migrations/__pycache__/0008_subcategory_sub_parent.cpython-38.pyc b/iteminfo/migrations/__pycache__/0008_subcategory_sub_parent.cpython-38.pyc[m
+[1mindex 6fc4a40..3ffb2bf 100644[m
+Binary files a/iteminfo/migrations/__pycache__/0008_subcategory_sub_parent.cpython-38.pyc and b/iteminfo/migrations/__pycache__/0008_subcategory_sub_parent.cpython-38.pyc differ
+[1mdiff --git a/iteminfo/migrations/__pycache__/0009_auto_20201027_1443.cpython-38.pyc b/iteminfo/migrations/__pycache__/0009_auto_20201027_1443.cpython-38.pyc[m
+[1mindex a04d8fc..404bdef 100644[m
+Binary files a/iteminfo/migrations/__pycache__/0009_auto_20201027_1443.cpython-38.pyc and b/iteminfo/migrations/__pycache__/0009_auto_20201027_1443.cpython-38.pyc differ
+[1mdiff --git a/iteminfo/migrations/__pycache__/__init__.cpython-38.pyc b/iteminfo/migrations/__pycache__/__init__.cpython-38.pyc[m
+[1mindex 291b583..afdf33f 100644[m
+Binary files a/iteminfo/migrations/__pycache__/__init__.cpython-38.pyc and b/iteminfo/migrations/__pycache__/__init__.cpython-38.pyc differ
+[1mdiff --git a/main/__pycache__/__init__.cpython-38.pyc b/main/__pycache__/__init__.cpython-38.pyc[m
+[1mindex d0eafe2..be9ca9c 100644[m
+Binary files a/main/__pycache__/__init__.cpython-38.pyc and b/main/__pycache__/__init__.cpython-38.pyc differ
+[1mdiff --git a/main/__pycache__/admin.cpython-38.pyc b/main/__pycache__/admin.cpython-38.pyc[m
+[1mindex 57fe01f..e8a02ce 100644[m
+Binary files a/main/__pycache__/admin.cpython-38.pyc and b/main/__pycache__/admin.cpython-38.pyc differ
+[1mdiff --git a/main/__pycache__/apps.cpython-38.pyc b/main/__pycache__/apps.cpython-38.pyc[m
+[1mindex 08d290d..572de61 100644[m
+Binary files a/main/__pycache__/apps.cpython-38.pyc and b/main/__pycache__/apps.cpython-38.pyc differ
+[1mdiff --git a/main/__pycache__/models.cpython-38.pyc b/main/__pycache__/models.cpython-38.pyc[m
+[1mindex 402f79c..2ee9d6d 100644[m
+Binary files a/main/__pycache__/models.cpython-38.pyc and b/main/__pycache__/models.cpython-38.pyc differ
+[1mdiff --git a/main/__pycache__/urls.cpython-38.pyc b/main/__pycache__/urls.cpython-38.pyc[m
+[1mindex c709d7e..af4308c 100644[m
+Binary files a/main/__pycache__/urls.cpython-38.pyc and b/main/__pycache__/urls.cpython-38.pyc differ
+[1mdiff --git a/main/__pycache__/views.cpython-38.pyc b/main/__pycache__/views.cpython-38.pyc[m
+[1mindex d87b742..8317bf6 100644[m
+Binary files a/main/__pycache__/views.cpython-38.pyc and b/main/__pycache__/views.cpython-38.pyc differ
+[1mdiff --git a/main/migrations/__pycache__/0001_initial.cpython-38.pyc b/main/migrations/__pycache__/0001_initial.cpython-38.pyc[m
+[1mindex 64868c0..9693b85 100644[m
+Binary files a/main/migrations/__pycache__/0001_initial.cpython-38.pyc and b/main/migrations/__pycache__/0001_initial.cpython-38.pyc differ
+[1mdiff --git a/main/migrations/__pycache__/__init__.cpython-38.pyc b/main/migrations/__pycache__/__init__.cpython-38.pyc[m
+[1mindex 1ccd1de..2f343f1 100644[m
+Binary files a/main/migrations/__pycache__/__init__.cpython-38.pyc and b/main/migrations/__pycache__/__init__.cpython-38.pyc differ
+[1mdiff --git a/products/__pycache__/__init__.cpython-38.pyc b/products/__pycache__/__init__.cpython-38.pyc[m
+[1mindex 52d6e63..1fd2b3b 100644[m
+Binary files a/products/__pycache__/__init__.cpython-38.pyc and b/products/__pycache__/__init__.cpython-38.pyc differ
+[1mdiff --git a/products/__pycache__/admin.cpython-38.pyc b/products/__pycache__/admin.cpython-38.pyc[m
+[1mindex 4c99f85..7c3a022 100644[m
+Binary files a/products/__pycache__/admin.cpython-38.pyc and b/products/__pycache__/admin.cpython-38.pyc differ
+[1mdiff --git a/products/__pycache__/apps.cpython-38.pyc b/products/__pycache__/apps.cpython-38.pyc[m
+[1mindex e47ae79..4ea61a9 100644[m
+Binary files a/products/__pycache__/apps.cpython-38.pyc and b/products/__pycache__/apps.cpython-38.pyc differ
+[1mdiff --git a/products/__pycache__/models.cpython-38.pyc b/products/__pycache__/models.cpython-38.pyc[m
+[1mindex d69fe3f..ebf300b 100644[m
+Binary files a/products/__pycache__/models.cpython-38.pyc and b/products/__pycache__/models.cpython-38.pyc differ
+[1mdiff --git a/products/__pycache__/urls.cpython-38.pyc b/products/__pycache__/urls.cpython-38.pyc[m
+[1mindex b2042a1..e84f8ff 100644[m
+Binary files a/products/__pycache__/urls.cpython-38.pyc and b/products/__pycache__/urls.cpython-38.pyc differ
+[1mdiff --git a/products/__pycache__/views.cpython-38.pyc b/products/__pycache__/views.cpython-38.pyc[m
+[1mindex 4ae79b4..97ca260 100644[m
+Binary files a/products/__pycache__/views.cpython-38.pyc and b/products/__pycache__/views.cpython-38.pyc differ
+[1mdiff --git a/products/migrations/__pycache__/0001_initial.cpython-38.pyc b/products/migrations/__pycache__/0001_initial.cpython-38.pyc[m
+[1mindex 05c3bd3..7c93acd 100644[m
+Binary files a/products/migrations/__pycache__/0001_initial.cpython-38.pyc and b/products/migrations/__pycache__/0001_initial.cpython-38.pyc differ
+[1mdiff --git a/products/migrations/__pycache__/0002_auto_20200729_1553.cpython-38.pyc b/products/migrations/__pycache__/0002_auto_20200729_1553.cpython-38.pyc[m
+[1mindex 27f3b34..72575aa 100644[m
+Binary files a/products/migrations/__pycache__/0002_auto_20200729_1553.cpython-38.pyc and b/products/migrations/__pycache__/0002_auto_20200729_1553.cpython-38.pyc differ
+[1mdiff --git a/products/migrations/__pycache__/0003_product_price.cpython-38.pyc b/products/migrations/__pycache__/0003_product_price.cpython-38.pyc[m
+[1mindex 6fe64bb..f42ef18 100644[m
+Binary files a/products/migrations/__pycache__/0003_product_price.cpython-38.pyc and b/products/migrations/__pycache__/0003_product_price.cpython-38.pyc differ
+[1mdiff --git a/products/migrations/__pycache__/0004_auto_20200801_1126.cpython-38.pyc b/products/migrations/__pycache__/0004_auto_20200801_1126.cpython-38.pyc[m
+[1mindex a1754a6..a16defe 100644[m
+Binary files a/products/migrations/__pycache__/0004_auto_20200801_1126.cpython-38.pyc and b/products/migrations/__pycache__/0004_auto_20200801_1126.cpython-38.pyc differ
+[1mdiff --git a/products/migrations/__pycache__/0005_auto_20200804_1007.cpython-38.pyc b/products/migrations/__pycache__/0005_auto_20200804_1007.cpython-38.pyc[m
+[1mindex 22a2101..8ecb5bc 100644[m
+Binary files a/products/migrations/__pycache__/0005_auto_20200804_1007.cpython-38.pyc and b/products/migrations/__pycache__/0005_auto_20200804_1007.cpython-38.pyc differ
+[1mdiff --git a/products/migrations/__pycache__/0006_product_quantity.cpython-38.pyc b/products/migrations/__pycache__/0006_product_quantity.cpython-38.pyc[m
+[1mindex fd4f033..1343fcd 100644[m
+Binary files a/products/migrations/__pycache__/0006_product_quantity.cpython-38.pyc and b/products/migrations/__pycache__/0006_product_quantity.cpython-38.pyc differ
+[1mdiff --git a/products/migrations/__pycache__/0007_product_sub_category.cpython-38.pyc b/products/migrations/__pycache__/0007_product_sub_category.cpython-38.pyc[m
+[1mindex 09470c8..8740abb 100644[m
+Binary files a/products/migrations/__pycache__/0007_product_sub_category.cpython-38.pyc and b/products/migrations/__pycache__/0007_product_sub_category.cpython-38.pyc differ
+[1mdiff --git a/products/migrations/__pycache__/0008_auto_20200927_1020.cpython-38.pyc b/products/migrations/__pycache__/0008_auto_20200927_1020.cpython-38.pyc[m
+[1mindex 11d1e2a..49efc79 100644[m
+Binary files a/products/migrations/__pycache__/0008_auto_20200927_1020.cpython-38.pyc and b/products/migrations/__pycache__/0008_auto_20200927_1020.cpython-38.pyc differ
+[1mdiff --git a/products/migrations/__pycache__/0009_auto_20200927_1023.cpython-38.pyc b/products/migrations/__pycache__/0009_auto_20200927_1023.cpython-38.pyc[m
+[1mindex df2b49d..aae36bf 100644[m
+Binary files a/products/migrations/__pycache__/0009_auto_20200927_1023.cpython-38.pyc and b/products/migrations/__pycache__/0009_auto_20200927_1023.cpython-38.pyc differ
+[1mdiff --git a/products/migrations/__pycache__/__init__.cpython-38.pyc b/products/migrations/__pycache__/__init__.cpython-38.pyc[m
+[1mindex 58c77d9..3e1c28c 100644[m
+Binary files a/products/migrations/__pycache__/__init__.cpython-38.pyc and b/products/migrations/__pycache__/__init__.cpython-38.pyc differ
+[1mdiff --git a/search/__pycache__/__init__.cpython-38.pyc b/search/__pycache__/__init__.cpython-38.pyc[m
+[1mindex 960e4df..a771faa 100644[m
+Binary files a/search/__pycache__/__init__.cpython-38.pyc and b/search/__pycache__/__init__.cpython-38.pyc differ
+[1mdiff --git a/search/__pycache__/admin.cpython-38.pyc b/search/__pycache__/admin.cpython-38.pyc[m
+[1mindex 0a132c4..cb3a5f9 100644[m
+Binary files a/search/__pycache__/admin.cpython-38.pyc and b/search/__pycache__/admin.cpython-38.pyc differ
+[1mdiff --git a/search/__pycache__/apps.cpython-38.pyc b/search/__pycache__/apps.cpython-38.pyc[m
+[1mindex 1f88f5c..0b2d406 100644[m
+Binary files a/search/__pycache__/apps.cpython-38.pyc and b/search/__pycache__/apps.cpython-38.pyc differ
+[1mdiff --git a/search/__pycache__/models.cpython-38.pyc b/search/__pycache__/models.cpython-38.pyc[m
+[1mindex 17e4431..a74ebc9 100644[m
+Binary files a/search/__pycache__/models.cpython-38.pyc and b/search/__pycache__/models.cpython-38.pyc differ
+[1mdiff --git a/search/__pycache__/urls.cpython-38.pyc b/search/__pycache__/urls.cpython-38.pyc[m
+[1mindex 1ac84e4..720f701 100644[m
+Binary files a/search/__pycache__/urls.cpython-38.pyc and b/search/__pycache__/urls.cpython-38.pyc differ
+[1mdiff --git a/search/migrations/__pycache__/__init__.cpython-38.pyc b/search/migrations/__pycache__/__init__.cpython-38.pyc[m
+[1mindex 2772621..89aef1a 100644[m
+Binary files a/search/migrations/__pycache__/__init__.cpython-38.pyc and b/search/migrations/__pycache__/__init__.cpython-38.pyc differ
+[1mdiff --git a/userprofile/__pycache__/__init__.cpython-38.pyc b/userprofile/__pycache__/__init__.cpython-38.pyc[m
+[1mindex 49e6a62..7861e1b 100644[m
+Binary files a/userprofile/__pycache__/__init__.cpython-38.pyc and b/userprofile/__pycache__/__init__.cpython-38.pyc differ
+[1mdiff --git a/userprofile/__pycache__/admin.cpython-38.pyc b/userprofile/__pycache__/admin.cpython-38.pyc[m
+[1mindex d873968..f6deb68 100644[m
+Binary files a/userprofile/__pycache__/admin.cpython-38.pyc and b/userprofile/__pycache__/admin.cpython-38.pyc differ
+[1mdiff --git a/userprofile/__pycache__/apps.cpython-38.pyc b/userprofile/__pycache__/apps.cpython-38.pyc[m
+[1mindex cca38d3..093cbef 100644[m
+Binary files a/userprofile/__pycache__/apps.cpython-38.pyc and b/userprofile/__pycache__/apps.cpython-38.pyc differ
+[1mdiff --git a/userprofile/__pycache__/models.cpython-38.pyc b/userprofile/__pycache__/models.cpython-38.pyc[m
+[1mindex 72e306a..0403f71 100644[m
+Binary files a/userprofile/__pycache__/models.cpython-38.pyc and b/userprofile/__pycache__/models.cpython-38.pyc differ
+[1mdiff --git a/userprofile/__pycache__/urls.cpython-38.pyc b/userprofile/__pycache__/urls.cpython-38.pyc[m
+[1mindex a99985b..3c277dc 100644[m
+Binary files a/userprofile/__pycache__/urls.cpython-38.pyc and b/userprofile/__pycache__/urls.cpython-38.pyc differ
+[1mdiff --git a/userprofile/__pycache__/views.cpython-38.pyc b/userprofile/__pycache__/views.cpython-38.pyc[m
+[1mindex 92fc1ec..8e6a9df 100644[m
+Binary files a/userprofile/__pycache__/views.cpython-38.pyc and b/userprofile/__pycache__/views.cpython-38.pyc differ
+[1mdiff --git a/userprofile/migrations/__pycache__/__init__.cpython-38.pyc b/userprofile/migrations/__pycache__/__init__.cpython-38.pyc[m
+[1mindex 42523e7..0fb77ea 100644[m
+Binary files a/userprofile/migrations/__pycache__/__init__.cpython-38.pyc and b/userprofile/migrations/__pycache__/__init__.cpython-38.pyc differ
