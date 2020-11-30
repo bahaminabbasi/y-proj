@@ -6,6 +6,7 @@ __pycache__
 */*/*/__pycache__/*
 */*/__pycache__/*
 */__pycache__/*
+*.cpython-36.pyc
 .vscode
 A/secret.py
 imported_pip_requirements.txt
