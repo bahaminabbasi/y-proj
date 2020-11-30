@@ -28,7 +28,6 @@ def product_detail(request, slug):
     qs = Product.objects.filter(slug=slug)
     if qs.exists():
         product = qs.first()
-    
         product_price = persian.convert_en_numbers(product.price)
     else:
         return HttpResponse('not found')
