@@ -22,7 +22,5 @@ def cart_update(request):
             cart_obj.products.remove(product_id) # removed should be removed and plus one should be implemented
         else:
             cart_obj.products.add(prodcut_obj)
-
-    # cart_obj.products.remove(obj)
     return redirect('carts:home')
 

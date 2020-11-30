@@ -21,14 +21,14 @@
           </tr>
         {% endfor %}  
         <tr>
-            <td><b>Subtotal</b> {{ cart.subtotal }}</td>
+            <td><b>Subtotal</b>{{ cart.subtotal }}</td>
         </tr>
         <tr>
-            <td><b>Total</b> {{ cart.total }}</td>
+            <td><b>Total</b>{{ cart.total }}</td>
         </tr>  
         </tbody>
       </table>
     {% else %}
-    <p class="lead">Cart is empty</p>
+      <p class="lead">Cart is empty</p>
     {% endif %}
 {% endblock %}

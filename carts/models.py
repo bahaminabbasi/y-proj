@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.db import models
 from django.db.models.signals import pre_save, post_save, m2m_changed
+import persian
 
 from products.models import Product
 from A.utils import shamsi_date
@@ -37,7 +38,7 @@ class Cart(models.Model):
     user            = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)
     products        = models.ManyToManyField(Product, blank=True)
     subtotal        = models.DecimalField(default=0.00, max_digits=100, decimal_places=2)
-    total           = models.DecimalField(default=0.00, max_digits=100, decimal_places=2)
+    total           = models.IntegerField()
     updated         = models.CharField(max_length=160, default=shamsi_date)
     timpestamp      = models.CharField(max_length=160, default=shamsi_date)
 
@@ -45,6 +46,12 @@ class Cart(models.Model):
 
     def __str__(self):
         return str(self.id)
+
+    def persian_total_price(self):
+        return persian.convert_en_numbers(self.total)
+
+    def persian_subtotal_price(self):
+        return persian.convert_en_numbers(self.subtotal)
 
 
 def m2m_changed_cart_receiver(sender, instance, action, *args, **kwargs):
@@ -62,7 +69,7 @@ m2m_changed.connect(m2m_changed_cart_receiver, sender=Cart.products.through)
 
 def pre_save_cart_receiver(sender, instance, *args, **kwargs):
     if instance.subtotal > 0:
-        instance.total = instance.subtotal + 10
+        instance.total = instance.subtotal + 0
     else:
         instance.total = 0.00   
 
