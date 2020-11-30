@@ -1,9 +1,12 @@
 from django.shortcuts import render, HttpResponse
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
-from carts.models import Cart
 from .models import Product
+from .filters import ProductFilter
+from carts.models import Cart
 from iteminfo.models import Category, SubCategory
+
+
 
 import persian
 
@@ -42,27 +45,27 @@ def product_filter(request, cat, level):
     if level == 0:
         category = Category.objects.filter(slug=cat).first()
         if category is not None:
-            qs = Product.objects.filter(category=category.id)
+            products = Product.objects.filter(category=category.id)
+            myFilter = ProductFilter(request.GET, queryset=products)
+            products = myFilter.qs
             category_qs = SubCategory.objects.filter(parent=category, nesting_level=1)
             print(category_qs)
         else:
             return render(request, 'main/error.html')
         context = {
-            'products': qs,
+            'products': products,
             'category_qs': category_qs,
-            'page_title': category.name
+            'page_title': category.name,
+            'myFilter': myFilter
         }
     else:
         sub_cat = SubCategory.objects.filter(slug=cat).first()
         if sub_cat is not None:
-            qs = Product.objects.filter(sub_category=sub_cat.id)
+            products = Product.objects.filter(sub_category=sub_cat.id)
         else:
             return render(request, 'main/error.html')
         context = {
-            'products': qs,
-            
+            'products': products,
             'page_title': sub_cat.name,
         }
-    # else:
-    #      return render(request, 'main/test.html')
     return render(request, 'products/products_list.html', context)

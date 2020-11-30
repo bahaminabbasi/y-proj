@@ -45,66 +45,24 @@
         
         </div>
         <!--end of title-->
-        <div id="byPrice" class="mt-2">
-          <div class="products-categories-title mt-2 mb-3">
-            <h6>خرید بر اساس قیمت</h6>
-            <div class="products-categories-underline"></div>
+        <form>
+          <div id="byPrice" class="mt-2">
+                greater than
+                {{ myFilter.form.price__gt }}
+                </br>
+                less than
+                {{ myFilter.form.price__lt }}
+            </div>
+            <!--end of title-->
+            <div id="byBrand" class="mt-2">
+              <div class="products-categories-title mt-2 mb-3">
+                <h6>خرید بر اساس برند</h6>
+                <div class="products-categories-underline"></div>
+              </div>
+              {{  myFilter.form.category }}
+              <button class="btn btn-primary" type="submit">fitler</button>
           </div>
-          
-          <form>
-            <div class="form-group">
-              <label for="price-range">محدوده قیمت</label>
-              <div id="price-range"></div>
-              <label for="price-range" id="priceRight">از <span>50</span>هزارتومان</label>
-              <label for="price-range" id="priceLeft">تا <span>100</span>هزارتومان</label>
-            </div>
-          </form>
-          <form action=""  style="direction:ltr;" class="searchBrand mb-2">
-            <input type="text" placeholder="جستجوی نام کالا" name="searchBar2" style="direction:rtl;">
-            <button type="submit"><i class="fa fa-search"></i></button>
-          </form>
-        </div>
-        <!--end of title-->
-        <div id="byBrand" class="mt-2">
-          <div class="products-categories-title mt-2 mb-3">
-            <h6>خرید بر اساس برند</h6>
-            <div class="products-categories-underline"></div>
-          </div>
-          <form action="" id="searchBrand" style="direction:ltr;" class="mb-2 searchBrand">
-            <input type="text" placeholder="جستجوی نام برند" name="searchBar1" style="direction:rtl;">
-            <button type="submit"><i class="fa fa-search"></i></button>
-          </form>
-          <form id="brandha">
-            <!--##single Brand-->
-            <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="brands1">
-              <label class="form-check-label mr-3" for="brands1">آکوافرش</label>
-              <label class="form-check-label brandEng ml-0" for="brands1">Aquafresh</label>
-            </div>
-            <!--##End of Single Brand-->
-            <!--##single Brand-->
-            <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="brands1">
-              <label class="form-check-label mr-3" for="brands1">نیوآ</label>
-              <label class="form-check-label brandEng ml-0" for="brands1">Nivea</label>
-            </div>
-            <!--##End of Single Brand-->
-            <!--##single Brand-->
-            <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="brands1">
-              <label class="form-check-label mr-3" for="brands1">اوریاژ</label>
-              <label class="form-check-label brandEng ml-0" for="brands1">Uriage</label>
-            </div>
-            <!--##End of Single Brand-->
-            <!--##single Brand-->
-            <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="brands1">
-              <label class="form-check-label mr-3" for="brands1">مای</label>
-              <label class="form-check-label brandEng ml-0" for="brands1">My</label>
-            </div>
-            <!--##End of Single Brand-->
-          </form>
-        </div>
+        </form>
         <!--end of title-->
       </div>
       <!--product images-->
@@ -166,11 +124,6 @@
           {% if products.has_next %}
             <li class="page-item"><a href="?page={{products.next_page_number}}" role="button" class="page-link">بعدی</a></li>
           {% endif %}
-          <!-- <li class="page-item"><a class="page-link" href="#">قبلی</a></li>
-          <li class="page-item active"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#">بعدی</a></li> -->
         </ul>
       </div>
       <!--end of pagination-->

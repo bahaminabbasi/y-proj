@@ -28,15 +28,15 @@ class SubCategory(models.Model):
 
 
 class StandardDescription(models.Model):
-    made_in             = models.CharField(max_length=200)
-    gender              = models.CharField(max_length=10, choices=GENDER, default='BOTH')
-    form                = models.CharField(max_length=100)
-    pack_of             = models.CharField(max_length=100)
-    dosage              = models.TextField()
-    usage               = models.TextField()
-    short_description   = models.TextField(default='')
-    features            = models.TextField(default='')
-    storing             = models.TextField()
+    made_in             = models.CharField(max_length=200, blank=True)
+    gender              = models.CharField(max_length=10, choices=GENDER, default='BOTH', blank=True)
+    form                = models.CharField(max_length=100, blank=True)
+    pack_of             = models.CharField(max_length=100, blank=True)
+    dosage              = models.TextField(blank=True)
+    usage               = models.TextField(blank=True)
+    short_description   = models.TextField(default='', blank=True)
+    features            = models.TextField(default='', blank=True)
+    storing             = models.TextField(blank=True)
 
     def __str__(self):
         return self.made_in

@@ -9,7 +9,6 @@ from main.models import MainPictures
 class AddProductForm(forms.ModelForm):
     class Meta:
         model = Product
-        # fields = '__all__'
         exclude = ['slug', 'active', 'date', 'category', 'description']
         widgets = {
             'english_title': TextInput(attrs={'class':'form-control','cols': 10, 'rows': 1}),
@@ -38,9 +37,7 @@ class StandardDescriptionForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         for field in self:
             field.field.widget.attrs['class'] = 'form-control'
-            
-        # self.fields['comment'].widget.attrs.update(size='40')
-        # <label for="id_pack_of">Pack of:</label>
+
 
     class Meta:
         model = StandardDescription
@@ -69,16 +66,3 @@ class MainPicturesForm(forms.ModelForm):
         model = MainPictures
         fields = '__all__'
         
-
-
-# class BookForm(forms.Form):
-#     category0 = forms.ModelChoiceField(queryset=Category.objects.filter(parent=None))
-#     category1 = forms.ModelChoiceField(queryset=Category.objects.filter(nesting_level=1))
-#     category2 = forms.ModelChoiceField(queryset=Category.objects.filter(nesting_level=2))
-
-
-# class AddCategory(forms.ModelForm):
-#     class Meta:
-#         model = Category
-#         fields ='__all__'
-#         exclude = ['slug']

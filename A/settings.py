@@ -15,6 +15,7 @@ INSTALLED_APPS = [
 
     'crispy_forms',
     'imagekit',
+    'django_filters',
 
     'address.apps.AddressConfig',
     'accounts.apps.AccountsConfig',

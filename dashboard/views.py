@@ -38,19 +38,26 @@ def add_product(request):
         sub_cat3 = request.POST.get('levelthree_placeholder')
         image = request.FILES['image']
 
+        print()
+        print(sub_cat1, sub_cat2, sub_cat3)
+        print()
         category = Category.objects.filter(name=cat).first()
-        if sub_cat1 != '-------------':
-            sub_cat1_obj = SubCategory.objects.filter(name=sub_cat1).first()
-        if sub_cat2 != '-------------':
-            sub_cat2_obj = SubCategory.objects.filter(name=sub_cat2).first()
         if sub_cat3 != '-------------':
             sub_cat3_obj = SubCategory.objects.filter(name=sub_cat3).first()
-        if sub_cat3_obj:
             sub_category = sub_cat3_obj
-        elif sub_cat2_obj:
+        elif sub_cat2 != '-------------':
+            sub_cat2_obj = SubCategory.objects.filter(name=sub_cat2).first()
             sub_category = sub_cat2_obj
-        else:
+        
+        elif sub_cat1 != '-------------':
+            sub_cat1_obj = SubCategory.objects.filter(name=sub_cat1).first()
             sub_category = sub_cat1_obj
+        # if sub_cat3_obj:
+        #     sub_category = sub_cat3_obj
+        # if sub_cat2_obj:
+        #     sub_category = sub_cat2_obj
+        # else:
+        #     sub_category = sub_cat1_obj
 
         des_form = StandardDescriptionForm(request.POST)
         if des_form.is_valid():

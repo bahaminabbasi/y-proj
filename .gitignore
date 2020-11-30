@@ -3,9 +3,9 @@ tmp
 __pycache__
 *.pyc
 *.pot
-*/*/*/__pycache__/
-*/*/__pycache__/
-*/__pycache__/
+*/*/*/__pycache__/*
+*/*/__pycache__/*
+*/__pycache__/*
 .vscode
 A/secret.py
 imported_pip_requirements.txt
