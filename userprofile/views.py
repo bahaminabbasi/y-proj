@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 
 from .models import UserProfile
 from accounts.models import User
+from .forms import UserProfileForm
 
 @login_required
 def main_profile_page(request, id):
@@ -17,4 +18,8 @@ def main_profile_page(request, id):
 
 @login_required
 def edit_profile(request):
-    return render(request, 'userprofile/edit_profile.html')
+    form = UserProfileForm()
+    context = {
+        'form': form,
+    }
+    return render(request, 'userprofile/edit_profile.html', context)

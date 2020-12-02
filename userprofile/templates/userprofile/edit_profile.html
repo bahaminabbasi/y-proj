@@ -1,4 +1,14 @@
 {% extends 'website/base.html' %}
 {% block content %}
-EDIT PROFILE
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }} 
+            <button type="submit" class="btn btn-success">ثبت</button>
+        </form>
+      </div>
+    </div>
+  </div>
 {% endblock %}
