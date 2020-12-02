@@ -9,6 +9,8 @@ class UserProfile(models.Model):
     first_name          = models.CharField(max_length=120, null=True, blank=True)
     last_name           = models.CharField(max_length=120, null=True, blank=True)
     contact_number      = models.IntegerField(null=True, blank=True)
+    melli_code          = models.IntegerField(null=True, blank=True)
+    email               = models.EmailField(null=True, blank=True)
 
     def __str__(self):
         return f'{self.user_name} {self.first_name} {self.last_name}'
