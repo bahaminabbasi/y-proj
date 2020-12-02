@@ -11,7 +11,7 @@ class UserProfile(models.Model):
     contact_number      = models.IntegerField(null=True, blank=True)
 
     def __str__(self):
-        return f'{self.first_name} {self.last_name}'
+        return f'{self.user_name} {self.first_name} {self.last_name}'
 
 
 def create_profile(sender, instance, *args, **kwargs):
