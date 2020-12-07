@@ -10,11 +10,15 @@ class UserProfileForm(forms.ModelForm):
             field.field.widget.attrs['class'] = 'form-control'
             field.field.required = True
             print(field)
+        self.fields['email'].required = False
     class Meta:
         model = UserProfile
         exclude = ['user_name', ]
         widgets = {
             'first_name': forms.TextInput(attrs={'cols': 1, 'rows': 1}),
+        }
+        value = {
+            'first_name': 'est'
         }
         labels = {
             'first_name': 'نام',

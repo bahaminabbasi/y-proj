@@ -5,7 +5,46 @@
       <div class="col-12">
         <form method="POST">
             {% csrf_token %}
-            {{ form.as_p }} 
+            <div class="form-group">
+              <label for="productNameFa">first name</label>
+              {% if up.first_name %}
+                <input type="text" class="form-control" name="first_name" id="first_name" value="{{ up.first_name }}" required>
+              {% else %}
+                <input type="text" class="form-control" name="first_name" id="first_name" required>
+              {% endif %}
+              </div>
+            <div class="form-group">
+              <label for="productNameFa">last name</label>
+              {% if up.last_name %}
+                <input type="text" class="form-control" name="last_name" id="last_name" value="{{ up.last_name }}" required>
+              {% else %}
+                <input type="text" class="form-control" name="last_name" id="last_name" required>
+              {% endif %}  
+            </div>
+            <div class="form-group">
+              <label for="productNameFa">contact_number</label>
+              {% if up.contact_number %}
+                <input type="text" class="form-control" name="contact_number" id="contact_number" value="{{ up.contact_number }}" required>
+              {% else %}
+                <input type="text" class="form-control" name="contact_number" id="contact_number" required>
+              {% endif %}
+              </div>
+            <div class="form-group">
+              <label for="productNameFa">melli_code</label>
+              {% if up.contact_number %}
+                <input type="text" class="form-control" name="melli_code" id="melli_code" value="{{ up.melli_code }}" required>
+              {% else %}
+                <input type="text" class="form-control" name="melli_code" id="melli_code" required>
+              {% endif %}
+              </div>
+            <div class="form-group">
+              <label for="productNameFa">email</label>
+              {% if up.email %}
+                <input type="text" class="form-control" name="email" id="email" value="{{ up.email }}">
+              {% else %}
+                <input type="text" class="form-control" name="email" id="email">
+              {% endif %}
+              </div>
             <button type="submit" class="btn btn-success">ثبت</button>
         </form>
       </div>
