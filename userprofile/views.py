@@ -22,35 +22,29 @@ def main_profile_page(request, id):
 
 @login_required
 def edit_profile(request):
-    form = UserProfileForm()
     user = request.user
+    user_profile = UserProfile.objects.filter(user_name=user).first()
     if request.method == 'POST':
-        form = UserProfileForm(request.POST)
-        if form.is_valid():
-            user_profile = UserProfile.objects.filter(user_name=user).first()
-            first_name = form.cleaned_data.get('first_name')
-            last_name = form.cleaned_data.get('last_name')
-            contact_number = form.cleaned_data.get('contact_number')
-            melli_code = form.cleaned_data.get('melli_code')
-            email = form.cleaned_data.get('email')
-            # print(user_profile, first_name, last_name, contact_number, melli_code, email)
-            user_profile.first_name = first_name
-            user_profile.last_name = last_name
-            user_profile.contact_number = contact_number
-            user_profile.melli_code = melli_code
-            user_profile.email = email
-            user_profile.save()
-            return redirect('userprofile:main-profile-page', id=user.id)
-    else:
-        pass
+        print(request.POST)
+        first_name = request.POST.get('first_name')
+        last_name = request.POST.get('last_name')
+        contact_number = request.POST.get('contact_number')
+        melli_code = request.POST.get('melli_code')
+        email = request.POST.get('email')
+        user_profile.first_name = first_name
+        user_profile.last_name = last_name
+        user_profile.contact_number = contact_number
+        user_profile.melli_code = melli_code
+        user_profile.email = email
+        user_profile.save()
+        return redirect('userprofile:main-profile-page', id=user.id)
 
+    else:
+        # form = UserProfileForm()
+        pass
     context = {
-        'form': form,
+        'user': user,
+        'up': user_profile,
     }
     return render(request, 'userprofile/edit_profile.html', context)
 
-
-class UpUpdate(UpdateView):
-    model = UserProfile
-    fields = ['first_name']
-    template_name = 'userprofile/up.html'
