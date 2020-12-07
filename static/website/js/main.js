@@ -130,20 +130,19 @@ $(document).ready(function(){
 
 //######btn Low Up #### single product######//
 $(document).ready(function(){
-  var T = 1;
-  $('#btnLow').click(function(){
-      if($('#count1').html()!=0)
+  $('.btnLow').click(function(){
+    var T = $(this).next('.count1').html();
+      if($(this).next('button').html()!=0)
       {
-        $('#count1').html(--T);
+        $(this).next('button').html(--T);
       }else{
-        $('#count1').html() = 0;
-      }
-      
+        $(this).next('button').html() = 0;
+      } 
   });
-  $('#btnUp').click(function(){
-    $('#count1').html(++T);
+  $('.btnUp').click(function(){
+    var T = $(this).prev('.count1').html();
+    $(this).prev('button').html(++T);
   });
-
 })
 
 //###Product.html slider Price####
