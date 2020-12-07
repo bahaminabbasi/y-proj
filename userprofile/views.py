@@ -5,6 +5,9 @@ from .models import UserProfile
 from accounts.models import User
 from .forms import UserProfileForm
 
+from django.views.generic.edit import UpdateView
+
+
 
 @login_required
 def main_profile_page(request, id):
@@ -45,3 +48,9 @@ def edit_profile(request):
         'form': form,
     }
     return render(request, 'userprofile/edit_profile.html', context)
+
+
+class UpUpdate(UpdateView):
+    model = UserProfile
+    fields = ['first_name']
+    template_name = 'userprofile/up.html'
