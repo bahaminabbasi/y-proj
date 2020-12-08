@@ -12,4 +12,4 @@ class ProductFilter(django_filters.FilterSet):
     brand_name = django_filters.ChoiceFilter(field_name='brand_name')
     class Meta:
         model = Product
-        fields = ['category', 'brand_name']
+        fields = ['brand_name', ]

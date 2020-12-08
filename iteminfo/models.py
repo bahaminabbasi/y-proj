@@ -10,6 +10,7 @@ GENDER = [
 class Category(models.Model):
     name                = models.CharField(max_length=50, unique=True)
     slug                = models.SlugField(max_length=60)
+    nesting_level       = models.PositiveIntegerField(default=0, blank=True, null=True)
 
     def __str__(self):
         return self.name

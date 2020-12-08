@@ -13,10 +13,10 @@
   <div class="row">
     <div class="col-12 col-lg-12" style="padding-left: 1.86rem;">
       <ul class="breadcrumb direction">
-        <li class="breadcrumb-item"><a href="#">یاس دارو</a></li>
-        <li class="breadcrumb-item"><a href="#">آرایشی بهداشتی</a></li>
-        <li class="breadcrumb-item"><a href="#">کرم ضدآفتاب</a></li>
-        <li class="breadcrumb-item active">بانوان</li>
+        <li class="breadcrumb-item"><a href="{% url 'main:home' %}">یاس دارو</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'products:product-filter' category.slug category.nesting_level %}">{{ category }}</a></li>
+        <!-- <li class="breadcrumb-item"><a href="#">کرم ضدآفتاب</a></li>
+        <li class="breadcrumb-item active">بانوان</li> -->
       </ul>
     </div>
   </div>
@@ -57,6 +57,9 @@
             <div id="byBrand" class="mt-2">
               <div class="products-categories-title mt-2 mb-3">
                 <h6>خرید بر اساس برند</h6>
+              </br>
+                {{ myFilter.form.brand_name }}
+              </br>
                 <div class="products-categories-underline"></div>
               </div>
               {{  myFilter.form.category }}

@@ -49,23 +49,22 @@ def product_filter(request, cat, level):
             myFilter = ProductFilter(request.GET, queryset=products)
             products = myFilter.qs
             category_qs = SubCategory.objects.filter(parent=category, nesting_level=1)
-            print(category_qs)
         else:
             return render(request, 'main/error.html')
-        context = {
-            'products': products,
-            'category_qs': category_qs,
-            'page_title': category.name,
-            'myFilter': myFilter
-        }
     else:
-        sub_cat = SubCategory.objects.filter(slug=cat).first()
-        if sub_cat is not None:
-            products = Product.objects.filter(sub_category=sub_cat.id)
+        category = SubCategory.objects.filter(slug=cat).first()
+        if category is not None:
+            products = Product.objects.filter(sub_category=category.id)
+            myFilter = ProductFilter(request.GET, queryset=products)
+            products = myFilter.qs
+            category_qs = SubCategory.objects.filter(sub_parent=category, nesting_level=level+1)
         else:
             return render(request, 'main/error.html')
-        context = {
-            'products': products,
-            'page_title': sub_cat.name,
+    context = {
+        'products': products,
+        'category': category,
+        'category_qs': category_qs,
+        'page_title': category.name,
+        'myFilter': myFilter
         }
     return render(request, 'products/products_list.html', context)
