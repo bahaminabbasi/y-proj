@@ -5,32 +5,37 @@
     <div class="container-fluid">
       <div class="row">
         <!--###List of products###-->
-        {% if cart.products.exists %}
+        
         <div class="col-12 col-lg-9 col-md-8 col-sm-12 my-3">
           <div class="col PL1">
+            {% if cart.products.exists %}
             <!--###Single product###-->
             {% for product in cart.products.all %}
                 <div class="PL2">
-                <div class="col-3 col-lg-3 rightImgList d-flex align-items-center">
-                    <a href="{{ product.get_absolute_url }}"><img src="{{ product.image_medium.url }}" alt="product" class="img-fluid"></a>
-                </div>
-                <div class="col-9 col-lg-9 topList1">
-                  <a href="{{ product.get_absolute_url }}"><h4>{{ product.persian_title }}</h4></a>
-                </div>
-                <div class="col-9 col-lg-9 bottumList1 d-flex align-items-end p-1">
+                  <div class="col-3 col-lg-3 rightImgList d-flex align-items-center">
+                      <a href="{{ product.get_absolute_url }}"><img src="{{ product.image_medium.url }}" alt="product" class="img-fluid"></a>
+                  </div>
+                  <div class="col-9 col-lg-9 topList1">
+                    <a href="{{ product.get_absolute_url }}"><h4>{{ product.persian_title }}</h4></a>
+                  </div>
+                  <div class="col-9 col-lg-9 bottumList1 d-flex align-items-end p-1">
                     <div class="btn-group btn-group-sm" style="direction:ltr;" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-outline-primary btnLow">-</button>
-                    <button type="button" class="btn btn-outline-primary count1">1</button>
-                    <button type="button" class="btn btn-outline-primary btnUp">+</button>
-                    </div>
+                      <button type="button" class="btn btn-outline-primary btnLow">-</button>
+                      <button type="button" class="btn btn-outline-primary count1">1</button>
+                      <button type="button" class="btn btn-outline-primary btnUp">+</button>
+                    </div>  
                     {% include 'products/snippets/update_cart.html' with in_cart=True %}
-                    <p class="priceList1 font-weight-bold">{{ product.price }}<span class="text-muted">تومان</span></p>
-                </div>
+                      <p class="priceList1 font-weight-bold">{{ product.price }}<span class="text-muted">تومان</span></p>
+                  </div>
                 </div>
             {% endfor %}
-        {% else %}
-            <h1>Cart Empty</h1>
-        {% endif %}
+            {% else %} 
+              <div class="PL2">
+                <h1 class='text-center mt-5'>
+                  سبد خرید شما <span class='text-danger'>خالی</span> است!
+                </h1>
+              </div>
+            {% endif %}
             <!--###End of Single product###-->
           </div>
         </div>
