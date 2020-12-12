@@ -30,17 +30,17 @@
         <div class="jumbotron j1">
           <ul class="nav nav-tabs d-flex flex-wrap" role="tablist">
             <li class="nav-item">
-              <a href="#userInformation" class="nav-link active product-info-link" data-toggle="tab">اطلاعات کاربری</a>
+              <a href="#userInformation" class="nav-link {% if active_tab == 'main' %} active {% endif %} product-info-link" data-toggle="tab">اطلاعات کاربری</a>
             </li>
             <li class="nav-item">
-              <a href="#userAddress" class="nav-link product-info-link" data-toggle="tab">نشانی ها</a>
+              <a href="#userAddress" class="nav-link {% if active_tab == 'address_tab' %} active {% endif %} product-info-link" data-toggle="tab">نشانی ها</a>
             </li>
             <li class="nav-item">
               <a href="#userOrders" class="nav-link product-info-link" data-toggle="tab">سفارشات من</a>
             </li>
           </ul>
           <div class="tab-content">
-            <div id="userInformation" class="container tab-pane active">
+            <div id="userInformation" class="container tab-pane {% if active_tab == 'main' %} active {% else %} fade {% endif %}">
               <div class="container mt-2">
                 <div class="row">
                   <div class="col d-flex info1">
@@ -121,7 +121,7 @@
                 </div>
               </div>
             </div>
-            <div id="userAddress" class="tab-pane fade">
+            <div id="userAddress" class="tab-pane {% if active_tab == 'address_tab' %} active {% else %} fade {% endif %}">
               <div class="container mt-2">
                 <div class="container AddressBar">
                   <p class="mainAdd">منطقه شش، فرهنگشهر، بلوار شهید رجایی، خ فاطمی فرد<span class="delAdd"><button class="btn">حذف نشانی<i class="far fa-trash-alt text-muted mr-1"></i></button></span></p>
@@ -136,7 +136,7 @@
                 </div>
               </div>
             </div>
-            <div id="userOrders" class="tab-pane fade">
+            <div id="userOrders" class="tab-pane {% if active_tab == 'invoce ' %} active {% else %} fade {% endif %}">
               <div class="container p-2">
                 <p>این یک متن آزمایشی است. محصول کشور فرانسه. تضمین قیمت و اصالت کالا که این محصول را متمایز میکند. این یک متن تست است و صرفا برای آزمایش است. نظرات درباره این کالا مثبت است و مشتریان این محصول رضایت کافی را دارند.</p>
               </div>
@@ -310,45 +310,34 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form method="POST" action="{% url 'address:add-address' %}">
+          {% csrf_token %}
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="inputState">استان*</label>
-              <select id="inputState" class="form-control" required>
-                <option selected>تهران</option>
-                <option>فارس</option>
-                <option>بوشهر</option>
-                <option>اهواز</option>
-                <option>اصفهان</option>
-              </select>
+              <input type="text" class="form-control" name="state" id="state">
             </div>
             <div class="form-group col-md-6">
               <label for="inputState">شهر*</label>
-              <select id="inputState" class="form-control" required>
-                <option selected>تهران</option>
-                <option>شیراز</option>
-                <option>برازجان</option>
-                <option>اهواز</option>
-                <option>اصفهان</option>
-              </select>
+              <input type="text" class="form-control" name="city" id="city">
             </div>
           </div>
           <div class="form-group">
             <label for="inputAddress">نشانی دقیق*</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="شیراز/بلوار شهید رجایی/کوچه 25/پلاک 8" required>
+            <input type="text" class="form-control" name="full_address" id="full_address" placeholder="شیراز/بلوار شهید رجایی/کوچه 25/پلاک 8">
           </div>
           <div class="form-row">
             <div class="form-group col-md-2">
               <label for="inputCity">پلاک*</label>
-              <input type="text" class="form-control" id="inputCity" required>
+              <input type="text" class="form-control" name="plaque" id="plaque">
             </div>
             <div class="form-group col-md-2">
               <label for="inputCity">واحد</label>
-              <input type="text" class="form-control" id="inputCity">
+              <input type="text" class="form-control" name="flat" id="flat">
             </div>
             <div class="form-group col-md-8">
               <label for="inputZip">کدپستی*</label>
-              <input type="text" class="form-control" id="inputZip" aria-describedby="codeHelp" required>
+              <input type="text" class="form-control" name="postal_code" id="postal_code">
               <small id="codeHelp" class="form-text text-muted">کدپستی باید ۱۰ رقم و بدون خط تیره باشد</small>
             </div>
           </div>
@@ -356,21 +345,21 @@
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="receiverName">نام گیرنده*</label>
-              <input type="text" class="form-control" id="receiverName" required>
+              <input type="text" class="form-control" name="receiver_firstname" id="receiver_firstname">
             </div>
             <div class="form-group col-md-6">
               <label for="receiverLName">نام خانوادگی گیرنده*</label>
-              <input type="text" class="form-control" id="receiverLName" required>
+              <input type="text" class="form-control" name="receiver_lastname" id="receiver_lastname">
             </div>
           </div>
           <div class="form-row">
-            <div class="form-group col-md-6">
+            <!-- <div class="form-group col-md-6">
               <label for="idNumber">کدملی گیرنده*</label>
-              <input type="text" class="form-control" id="idNumber" required>
-            </div>
+              <input type="text" class="form-control" id="idNumber">
+            </div> -->
             <div class="form-group col-md-6">
               <label for="phoneNumber">شماره موبایل*</label>
-              <input type="text" class="form-control" id="phoneNumber" required>
+              <input type="text" class="form-control" name="receiver_phonenumber" id="receiver_phonenumber">
             </div>
           </div>
           <hr/>

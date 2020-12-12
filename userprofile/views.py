@@ -16,6 +16,7 @@ def main_profile_page(request, id):
     context = {
         'user': user,
         'user_profile': user_profile,
+        'active_tab': 'main',
     }
     return render(request, 'userprofile/main_profile_page.html', context)
 
