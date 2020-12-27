@@ -5,6 +5,7 @@ from .models import Product
 from .filters import ProductFilter
 from carts.models import Cart
 from iteminfo.models import Category, SubCategory
+from picture.models import Picture
 
 
 
@@ -31,13 +32,18 @@ def product_detail(request, slug):
     qs = Product.objects.filter(slug=slug)
     if qs.exists():
         product = qs.first()
+        pictures = Picture.objects.filter(product=product)
         product_price = persian.convert_en_numbers(product.price)
+        print()
+        print(pictures)
+        print()
     else:
         return HttpResponse('not found')
     context = {
         'product': product,
         'product_price': product_price,
         'cart': cart_obj,
+        'pictures': pictures,
     }
     return render(request, 'products/product_detail.html', context)
 

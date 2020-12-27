@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'dashboard.apps.DashboardConfig',
     'iteminfo.apps.IteminfoConfig',
     'main.apps.MainConfig',
+    'picture.apps.PictureConfig',
     'products.apps.ProductsConfig',
     'search.apps.SearchConfig',
     'userprofile.apps.UserprofileConfig',
