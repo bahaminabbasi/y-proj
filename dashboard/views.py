@@ -52,13 +52,6 @@ def add_product(request):
         elif sub_cat1 != '-------------':
             sub_cat1_obj = SubCategory.objects.filter(name=sub_cat1).first()
             sub_category = sub_cat1_obj
-        # if sub_cat3_obj:
-        #     sub_category = sub_cat3_obj
-        # if sub_cat2_obj:
-        #     sub_category = sub_cat2_obj
-        # else:
-        #     sub_category = sub_cat1_obj
-
         des_form = StandardDescriptionForm(request.POST)
         if des_form.is_valid():
             description = des_form.save()
@@ -74,69 +67,6 @@ def add_product(request):
                     description = description,
                     )
         b.save()
-    # # cat_form = CategoryForm()
-    # # sub_form = SubCategoryForm()
-    # categories = Category.objects.all()
-    # des_form = StandardDescriptionForm()
-    # content = {
-    #     # 'cat_form': cat_form,
-    #     # 'sub_form': sub_form,
-    #     'des_form': des_form,
-    #     'categories': categories,
-    # }
-    # if request.method == 'POST':
-    #     # form = CategoryForm(request.POST)#
-    #     persian_title = request.POST.get('persianTitle')
-    #     english_title = request.POST.get('englishTitle')
-    #     brand_name = request.POST.get('brand_name')
-    #     price = request.POST.get('price')
-    #     quantity = request.POST.get('quantity')
-    #     description = request.POST.get('description') # seems like there is no need fo this one
-
-    #     try:
-    #         image = request.FILES['image']
-    #         fs = FileSystemStorage()
-    #         filename = fs.save(image.name, image)
-    #         url = fs.url(filename)
-    #     except:
-    #         pass
-
-    #     # cat_form = CategoryForm(request.POST)
-    #     des_form = StandardDescriptionForm(request.POST)
-    #     # sub_form = SubCategoryForm(request.POST)
-    #     # if cat_form.is_valid():
-    #     #     category = cat_form.cleaned_data.get('category')
-    #     #     print(category)
-    #     # if sub_form.is_valid():
-    #     #     sub_category = sub_form.cleaned_data.get('sub_category')
-    #     #     print(sub_category)
-    #     if des_form.is_valid():
-    #         print(des_form.cleaned_data)
-    #         description = des_form.save()
-
-
-    #     selected_category = request.POST['selected_category']
-    #     selected_category_obj = Category.objects.filter(name=selected_category).first()
-    #     sub_categories = SubCategory.objects.filter(parent=selected_category_obj,
-    #                                                 nesting_level=1
-    #                                                 )
-    #     selected_subcategories = []
-    #     for sub_cat in sub_categories:
-    #         selected_subcategories.append(sub_cat.name)
-    #     return JsonResponse({'result': selected_subcategories})
-
-
-    #     # b = Product(
-    #     #             persian_title=persian_title, 
-    #     #             english_title=english_title, 
-    #     #             price=price, quantity=quantity,
-    #     #             brand_name=brand_name, 
-    #     #             image=image,
-    #     #             category=category,
-    #     #             sub_category=sub_category,
-    #     #             description = description,
-    #     #             )
-    #     # b.save()
     else:
         des_form = StandardDescriptionForm()
     return render(request, 'dashboard/add_product.html', context)
