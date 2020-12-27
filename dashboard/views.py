@@ -8,6 +8,7 @@ from .forms import AddProductForm, SubCategoryForm, CategoryForm, StandardDescri
 from products.models import Product
 from iteminfo.models import Category, SubCategory, StandardDescription
 from main.models import MainPictures
+from picture.models import Picture
 
 
 @staff_member_required
@@ -67,6 +68,15 @@ def add_product(request):
                     description = description,
                     )
         b.save()
+        image_1 = request.FILES['image_1']
+        image_2 = request.FILES['image_2']
+        image_3 = request.FILES['image_3']
+        p1 = Picture(product=b, image=image_1)
+        p2 = Picture(product=b, image=image_2)
+        p3 = Picture(product=b, image=image_3)
+        p1.save()
+        p2.save()
+        p3.save()
     else:
         des_form = StandardDescriptionForm()
     return render(request, 'dashboard/add_product.html', context)
