@@ -881,6 +881,16 @@ div.relateTitle>h4{
   line-height: 4rem;
   border-bottom: 2px solid #E63946;
 }
+.cBigPic{
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  background-color: seagreen;
+}
+.cBigPic>div{
+  width: 400px;
+  height: 400px;
+}
 div.picFooter1{
   height: 100px;
 }
