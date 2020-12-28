@@ -111,18 +111,30 @@
                 <input type="text" class="form-control" name="storing" id="storing" value="{{ product.description.storing }}">
               </div>
             </div>
-            <img src="{{ product.image_medium.url }}" alt="" class="img-thumbnail">
-              <div class="form-group">
-                <label for="productImage">تصویر محصول</label>
-                <input type="file" class="form-control-file" name="image" id="image">
+            <div class='container'>
+              <div class="d-flex">
+                <div class='col-3'>
+                  <label for="productImage" class='font-weight-bold'>تصویر محصول</label>
+                  <img src="{{ product.image_medium.url }}" alt="" class="img-thumbnail">
+                  <div class="form-group">
+                    <input type="file" class="form-control-file" name="image" id="image">
+                  </div>
+                </div>
+                <div class='col-9'>
+                  <div class="form-group">
+                    <label for="productImage" class='font-weight-bold'>تصاویر گالری</label>
+                    <div class='row'>
+                      {% for picture in pictures %}
+                      <div class='col'>
+                        <img src="{{ picture.image_medium.url }}" alt="" class="img-thumbnail">
+                        <input type="file" class="form-control-file" name="image{{ forloop.counter }}" id="image{{ forloop.counter }}">
+                      </div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="productImage">تصویر گالری</label>
-                {% for picture in pictures %}
-                  <img src="{{ picture.image_medium.url }}" alt="" class="img-thumbnail">
-                  <input type="file" class="form-control-file" name="image{{ forloop.counter }}" id="image{{ forloop.counter }}">
-                {% endfor %}
-              </div>
+            </div>  
               <button type="submit" class="btn btn-success">ویرایش محصول</button>
             </form>
           </div>
