@@ -8,7 +8,7 @@ class Picture(models.Model):
     product         = models.ForeignKey(Product, on_delete=models.CASCADE)
     image           = models.ImageField(upload_to='pictures_gallery')
 
-    image_400 = ImageSpecField(source='image',
+    image_medium = ImageSpecField(source='image',
                                   processors=[Thumbnail(120, 120)],
                                   format='JPEG',
                                   options={'quality': 60})

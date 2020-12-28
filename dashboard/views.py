@@ -94,10 +94,12 @@ def edit_product(request, id):
     cat = product.category
     sub_cat = product.sub_category
     categories = Category.objects.all()
+    pictures = Picture.objects.filter(product=product)
 
     context = {
         'product' : product,
         'categories': categories,
+        'pictures': pictures,
     }
     if sub_cat is not None:
             if sub_cat.nesting_level == 3:
@@ -168,6 +170,43 @@ def edit_product(request, id):
         else:
             os.remove(product.image.path)
             image = request.FILES['image']
+        # making set of pictres in gallery into a ->
+        # list so we can tell them apart by indexing
+        p_list = []
+        for picture in pictures:
+            p_list.append(picture)
+
+        # print()
+        # print("P_LIST : ", p_list)
+        # print()
+
+        image1 = p_list[0]
+        image2 = p_list[1]
+        image3 = p_list[2]
+
+        # print()
+        # print("P_LIST images2 : ", p_list[1].image)
+        # print()
+
+        # checking which images are altered, but not removing old ones!
+        if 'image1' in request.POST:
+            image1 = image1.image
+            # print()
+            # print("after if : ", image1)
+            # print()
+        else:
+            image1 = request.FILES['image1']
+            print()
+            print("after else : ", image1)
+            print()
+        if 'image2' in request.POST:
+            image2 = image2.image
+        else:
+            image2 = request.FILES['image2']
+        if 'image3' in request.POST:
+            image3 = image3.image
+        else:
+            image3 = request.FILES['image3']
 
         product.persian_title = persian_title
         product.english_title = english_title
@@ -187,7 +226,25 @@ def edit_product(request, id):
         product.category = edited_cat
         product.sub_category = edited_subcat
         product.description.save()
-        product.save()    
+        product.save()
+        i = 0
+        for picture in pictures:
+            if i == 0:
+                picture.image = image1 
+                picture.save()
+                # print(picture.image)
+                # print(image1)
+            if i == 1:
+                picture.image = image2 
+                picture.save()
+                # print(picture.image)
+                # print(image2)
+            if i == 2:
+                picture.image = image3 
+                picture.save()
+                # print(picture.image)
+                # print(image3)
+            i += 1
         return redirect('dashboard:tables')
     else:
         pass
