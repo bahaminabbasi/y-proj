@@ -6,20 +6,20 @@ body{
   background: white;
   direction: rtl;
   text-align: right;
-  font: yekan;
+  font: Sahel;
 }
 
 @font-face{
-  font-family: 'yekan';
-  src: url('yekan-font/Yekan.ttf') format('truetype'),
-       url('yekan-font/Yekan.eot') format('embedded-opentype');
+  font-family: 'Sahel';
+  src: url('yekan-font/Sahel.ttf') format('truetype'),
+       url('yekan-font/Sahel.eot') format('embedded-opentype');
 }
-.font12{font: 12px yekan;}
-.font13{font: 13px yekan;}
-.font14{font: 14px yekan;}
-.font15{font: 15px yekan;}
-.font16{font: 16px yekan;}
-.font17{font: 17px yekan;}
+.font12{font: 12px Sahel;}
+.font13{font: 13px Sahel;}
+.font14{font: 14px Sahel;}
+.font15{font: 15px Sahel;}
+.font16{font: 16px Sahel;}
+.font17{font: 17px Sahel;}
 
 /*#####navbar#####*/
 .sidebar{
