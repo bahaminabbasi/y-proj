@@ -4,6 +4,13 @@
   <section class="single-product py-5">
     <div class="container">
       <div class="row">
+        <div class="col-12" style="padding-left: 1.86rem;">
+          <ul class="breadcrumb direction">
+            <li class="breadcrumb-item"><a href="{% url 'main:home' %}">یاس دارو</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'products:product-filter' category.slug 0 %}">{{ category }}</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'products:product-filter' sub_category.slug sub_category.nesting_level %}">{{ sub_category }}</a></li>
+          </ul>
+        </div>
         <!--image of product-->
         <div class="col-10 mx-auto col-lg-4 text-center my-5">
           <div class="single-product-img-container">
@@ -99,11 +106,6 @@
               {% for pic in pictures %}
                 <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"><img src="{{ pic.image.url }}" class="img-fluid h-100 w-100" alt="singleProduct"></li>
               {% endfor %}
-              <!-- <li data-target="#carouselExampleCaptions" data-slide-to="1"><img src="http://placehold.it/150x150" class="img-fluid" alt="singleProduct"></li>
-              <li data-target="#carouselExampleCaptions" data-slide-to="2"><img src="http://placehold.it/150x150" class="img-fluid" alt="singleProduct"></li>
-              <li data-target="#carouselExampleCaptions" data-slide-to="3"><img src="http://placehold.it/150x150" class="img-fluid" alt="singleProduct"></li>
-              <li data-target="#carouselExampleCaptions" data-slide-to="4"><img src="http://placehold.it/150x150" class="img-fluid" alt="singleProduct"></li>
-              <li data-target="#carouselExampleCaptions" data-slide-to="5"><img src="http://placehold.it/150x150" class="img-fluid" alt="singleProduct"></li> -->
             </ol>
           </div>
         </div>

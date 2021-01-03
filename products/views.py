@@ -34,9 +34,8 @@ def product_detail(request, slug):
         product = qs.first()
         pictures = Picture.objects.filter(product=product)
         product_price = persian.convert_en_numbers(product.price)
-        print()
-        print(pictures)
-        print()
+        category = product.category
+        sub_category = product.sub_category
     else:
         return HttpResponse('not found')
     context = {
@@ -44,6 +43,8 @@ def product_detail(request, slug):
         'product_price': product_price,
         'cart': cart_obj,
         'pictures': pictures,
+        'category': category,
+        'sub_category': sub_category,
     }
     return render(request, 'products/product_detail.html', context)
 
