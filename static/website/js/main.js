@@ -132,17 +132,24 @@ $(document).ready(function(){
 $(document).ready(function(){
   $('.btnLow').click(function(){
     var T = $(this).next('.count1').html();
-      if($(this).next('button').html()!=0)
+      if($(this).next('button').html()!=1)
       {
         $(this).next('button').html(--T);
+        // showUpdateButton();
       }else{
-        $(this).next('button').html() = 0;
+        $(this).next('button').html() = 1;
+        // showUpdateButton();
       } 
   });
   $('.btnUp').click(function(){
     var T = $(this).prev('.count1').html();
     $(this).prev('button').html(++T);
+    $(this).next('button').css('display', 'block');
   });
+
+  function showUpdateButton(){
+    $('.updateBtn').css('display', 'block');
+  }
 })
 
 //###Product.html slider Price####

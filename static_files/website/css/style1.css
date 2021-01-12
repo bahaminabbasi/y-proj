@@ -991,6 +991,7 @@ div.bottumList1 .btn-group{
 div.bottumList1 p.priceList1{
   display: block;
   float: left;
+  margin-bottom: -0.2rem;
 }
 div.bottumList1 p.priceList1>span{
   font-weight: 300;
@@ -1005,6 +1006,10 @@ div.PL2>h4{
 }
 div.PL2 .btn-group{
   float: right;
+}
+.updateBtn{
+  font-size: 0.7rem;
+  display: none;
 }
 div.checkoutTop p.topRight4{
   float: right;
