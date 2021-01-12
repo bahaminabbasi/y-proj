@@ -26,15 +26,21 @@
         </ul>
       </div>
       <div class="card-footer cartFooter1">
-        <div class="row">
-          <div class="col-5 footerRight" id="footerRight">
-            <p class="text-muted">سر رسید</p>
-            <p class="price1"><span class="font-weight-bold">1,610,000</span>تومان</p>
+        {% if cart.products.count is not 0 %}
+          <div class="row">
+            <div class="col-5 footerRight" id="footerRight">
+              <p class="text-muted">سر رسید</p>
+              <p class="price1"><span class="font-weight-bold">1,610,000</span>تومان</p>
+            </div>
+            <div class="col-7 footerLeft" id="footerLeft">
+              <a href="#" class="btnCheck btn text-white"   id="btnCheck">پرداخت و ثبت سفارش</a>
+            </div>
           </div>
-          <div class="col-7 footerLeft" id="footerLeft">
-            <a href="#" class="btnCheck btn text-white"   id="btnCheck">پرداخت و ثبت سفارش</a>
+        {% else %}
+          <div>
+            Cart Empty
           </div>
-        </div>
+        {% endif %}
         
       </div>
     </div>
