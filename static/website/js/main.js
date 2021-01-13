@@ -142,9 +142,11 @@ $(document).ready(function(){
       } 
   });
   $('.btnUp').click(function(){
-    var T = $(this).prev('.count1').html();
-    $(this).prev('button').html(++T);
+
+    var counterPro = $(this).prev('.count1').html()
+    $(this).prev('button').html(++counterPro);
     $(this).next('button').css('display', 'block');
+
   });
 
   function showUpdateButton(){
