@@ -206,5 +206,6 @@ $('button.dropButton').click(function(){
   $(this).toggleClass('open1') 
 });
 
-
 })
+
+});

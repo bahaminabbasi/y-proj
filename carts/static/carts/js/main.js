@@ -33,8 +33,6 @@ $.ajaxSetup({
   var btn_click = $(this)
 
   var url = '/carts/maxlimit/'
-  var btn_class = 'btn btn-outline-primary btnUp d-none'
-  // var btn_class_active = "btn btn-outline-primary btnUp" 
   
   $.ajax({
       url: url,
@@ -45,7 +43,7 @@ $.ajaxSetup({
       },
       success: function(data){
         if(data['status'] == 'ok'){
-          btn_click.attr({'class':btn_class})
+          btn_click.attr({'disabled':true})
         }
 
       }
@@ -89,8 +87,6 @@ $.ajaxSetup({
   var btn_click = $(this).next().next('.btnUp')
 
   var url = '/carts/maxlimit/'
-  var btn_class = 'btn btn-outline-primary btnUp d-block'
-  // var btn_class_active = "btn btn-outline-primary btnUp" 
   
   $.ajax({
       url: url,
@@ -101,7 +97,7 @@ $.ajaxSetup({
       },
       success: function(data){
         if(data['status'] == 'ok'){
-          btn_click.attr({'class':btn_class})
+          btn_click.attr({'disabled':false})
         }
 
       }
