@@ -29,7 +29,8 @@ $.ajaxSetup({
 });
 
   var counterPro = $(this).prev('.count1').html()
-  var product_id = $('.btnUp').attr('data-id')
+  var product_id = $(this).attr('data-id')
+  var btn_click = $(this)
 
   var url = '/carts/maxlimit/'
   var btn_class = 'btn btn-outline-primary btnUp d-none'
@@ -44,7 +45,7 @@ $.ajaxSetup({
       },
       success: function(data){
         if(data['status'] == 'ok'){
-          $('.btnUp').attr({'class':btn_class})
+          btn_click.attr({'class':btn_class})
         }
 
       }
@@ -84,7 +85,8 @@ $.ajaxSetup({
 });
 
   var counterPro = $(this).next('.count1').html()
-  var product_id = $('.btnLow').attr('data-id')
+  var product_id = $(this).attr('data-id')
+  var btn_click = $(this).next().next('.btnUp')
 
   var url = '/carts/maxlimit/'
   var btn_class = 'btn btn-outline-primary btnUp d-block'
@@ -99,7 +101,7 @@ $.ajaxSetup({
       },
       success: function(data){
         if(data['status'] == 'ok'){
-          $('.btnUp').attr({'class':btn_class})
+          btn_click.attr({'class':btn_class})
         }
 
       }

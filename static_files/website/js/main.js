@@ -127,23 +127,23 @@ $(document).ready(function(){
       if($(this).next('button').html()!=1)
       {
         $(this).next('button').html(--T);
-        // showUpdateButton();
       }else{
         $(this).next('button').html() = 1;
-        // showUpdateButton();
       } 
   });
   $('.btnUp').click(function(){
 
     var counterPro = $(this).prev('.count1').html()
     $(this).prev('button').html(++counterPro);
-    $(this).next('button').css('display', 'block');
-
+    $('.continueBuy').css('display', 'none');
+    $('.updateBtn').css('display', 'block');
   });
 
-  function showUpdateButton(){
-    $('.updateBtn').css('display', 'block');
-  }
+  $('.updateBtn').click(function(){
+    $(this).css('display', 'none')
+    $(this).prev('.continueBuy').css('display', 'block')
+  });
+
 
 })
 
