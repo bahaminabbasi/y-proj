@@ -1,7 +1,11 @@
 {% extends 'website/base.html' %}
+{% load static %}
+{% block 'custome_js' %}
+  <script src='{% static "carts/js/main.js" %}'></script>
+{% endblock %}
 {% block content %}
   <!--totals-->
-  <section>
+  <section class="mb-3">
     <div class="container-fluid">
       <div class="row">
         <!--###List of products###-->
@@ -11,21 +15,25 @@
             {% if cart.products.exists %}
             <!--###Single product###-->
             {% for product in cart.products.all %}
-                <div class="PL2">
+                <div class="PL2 pt-2 pb-2">
                   <div class="col-3 col-lg-3 rightImgList d-flex align-items-center">
                       <a href="{{ product.get_absolute_url }}"><img src="{{ product.image_medium.url }}" alt="product" class="img-fluid"></a>
                   </div>
                   <div class="col-9 col-lg-9 topList1">
-                    <a href="{{ product.get_absolute_url }}"><h4>{{ product.persian_title }}</h4></a>
+                    <h5>{{ product.persian_title }}</h5>
                   </div>
                   <div class="col-9 col-lg-9 bottumList1 d-flex align-items-end p-1">
-                    <div class="btn-group btn-group-sm" style="direction:ltr;" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-outline-primary btnLow">-</button>
+                    <div class="btn-group" style="direction:ltr;" role="group" aria-label="Basic example">
+                      <button type="button" class="btn btn-outline-primary btnLow" data-id={{product.id}}>-</button>
                       <button type="button" class="btn btn-outline-primary count1">1</button>
-                      <button type="button" class="btn btn-outline-primary btnUp">+</button>
+                      <button type="button" class="btn btn-outline-primary btnUp" data-id={{product.id}}>+</button>
+                      <button type="button" class="updateBtn btn btn-outline-primary">
+                        به روز رسانی سبد خرید
+                      </button>
                     </div>  
                     {% include 'products/snippets/update_cart.html' with in_cart=True %}
-                      <p class="priceList1 font-weight-bold">{{ product.price }}<span class="text-muted">تومان</span></p>
+                    
+                      <p class="priceList1 font-weight-bold mr-auto">{{ product.price }}<span class="text-muted mr-1">تومان</span></p>
                   </div>
                 </div>
             {% endfor %}
@@ -65,4 +73,107 @@
     </div>
   </section>
   <!--end of totals-->
+
+  <!--###Related Products with Owl Carousel-->
+  <div class="container RP">
+    <div class="container relateTitle">
+      <h4>محصولات پیشنهادی</h4>
+    </div>
+    <div class="container carousel-wrap tab-content" id="relateStuff">
+      <div class="owl-carousel">
+        <div class="item">
+          <div class="card">
+            <a href="#"><img src="http://placehold.it/150x150" class="card-img-top" alt="product"></a>
+            <div class="card-body">
+              <h6 class="card-title">کرم برنزه کننده</h6>
+              <p class="card-text">این محصول برای تست است و تحت لیسانس انگلستان میباشد.</p>
+            </div>
+            <div class="card-footer">
+              <strong>45.200تومان</strong>
+            </div>
+          </div>
+          <a href="#" class="featured-store-link">افزودن به سبد خرید</a>
+        </div>
+        <div class="item">
+          <div class="card">
+            <a href="#"><img src="http://placehold.it/150x150" class="card-img-top" alt="product"></a>
+            <div class="card-body">
+              <h6 class="card-title">ماسک مو مای</h6>
+              <p class="card-text">این محصول برای تست است و تحت لیسانس آلمان میباشد.</p>
+            </div>
+            <div class="card-footer">
+              <strong>75.200تومان</strong>
+            </div>
+          </div>
+          <a href="#" class="featured-store-link">افزودن به سبد خرید</a>
+        </div>
+        <div class="item">
+          <div class="card">
+            <a href="#"><img src="http://placehold.it/150x150" class="card-img-top" alt="product"></a>
+            <div class="card-body">
+              <h6 class="card-title">کرم ضدلک ایوروشه3</h6>
+              <p class="card-text">این محصول برای تست است و تحت لیسانس فرانسه میباشد.</p>
+            </div>
+            <div class="card-footer">
+              <strong>95.200تومان</strong>
+            </div>
+          </div>
+          <a href="#" class="featured-store-link">افزودن به سبد خرید</a>
+        </div>
+        <div class="item">
+          <div class="card">
+            <a href="#"><img src="http://placehold.it/150x150" class="card-img-top" alt="product"></a>
+            <div class="card-body">
+              <h6 class="card-title">کرم ضد آفتاب ببک4</h6>
+              <p class="card-text">این محصول برای تست است و تحت لیسانس انگلستان میباشد.</p>
+            </div>
+            <div class="card-footer">
+              <strong>55.200تومان</strong>
+            </div>
+          </div>
+          <a href="#" class="featured-store-link">افزودن به سبد خرید</a>
+        </div>
+        <div class="item">
+          <div class="card">
+            <a href="#"><img src="http://placehold.it/150x150" class="card-img-top" alt="product"></a>
+            <div class="card-body">
+              <h6 class="card-title">شامپو ضدریزش آلپسین</h6>
+              <p class="card-text">این محصول برای تست است و تحت لیسانس انگلستان میباشد.</p>
+            </div>
+            <div class="card-footer">
+              <strong>65.200تومان</strong>
+            </div>
+          </div>
+          <a href="#" class="featured-store-link">افزودن به سبد خرید</a>
+        </div>
+        <div class="item">
+          <div class="card">
+            <a href="#"><img src="http://placehold.it/150x150" class="card-img-top" alt="product"></a>
+            <div class="card-body">
+              <h6 class="card-title">رنگ مو آلوور</h6>
+              <p class="card-text">این محصول برای تست است و تحت لیسانس هلند میباشد.</p>
+            </div>
+            <div class="card-footer">
+              <strong>75.200تومان</strong>
+            </div>
+          </div>
+          <a href="#" class="featured-store-link">افزودن به سبد خرید</a>
+        </div>
+        <div class="item">
+          <div class="card">
+            <a href="#"><img src="http://placehold.it/150x150" class="card-img-top" alt="product"></a>
+            <div class="card-body">
+              <h6 class="card-title">لوسیون بدن کیو وی</h6>
+              <p class="card-text">این محصول برای تست است و تحت لیسانس انگلستان میباشد.</p>
+            </div>
+            <div class="card-footer">
+              <strong>63.200تومان</strong>
+            </div>
+          </div>
+          <a href="#" class="featured-store-link">افزودن به سبد خرید</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--##End of Related Products####-->
 {% endblock %}

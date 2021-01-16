@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
+from django.http import JsonResponse, HttpResponse
 
 from products.models import Product
 from .models import Cart
@@ -22,4 +23,25 @@ def cart_update(request):
         else:
             cart_obj.products.add(prodcut_obj)
     return redirect('carts:home')
+
+def maxlimit(request):
+    if request.method == 'POST':
+        product_id = request.POST['product_id']
+        counterPro = int(request.POST['counterPro'])
+        product = get_object_or_404(Product, pk=product_id)
+        if product.quantity <= counterPro:
+            return JsonResponse({'status':'ok'})
+        else:
+            return JsonResponse({'status':'notOk'})
+
+# def minlimit(request):
+#     if request.method == 'POST':
+#         product_id = request.POST['product_id']
+#         counterPro = int(request.POST['counterPro'])
+#         product = get_object_or_404(Product, pk=product_id)
+#         if product.quantity >= counterPro:
+#             return JsonResponse({'status':'ok'})
+#         else:
+#             return JsonResponse({'status':'notOk'})  
+
 
