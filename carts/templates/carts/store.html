@@ -27,10 +27,8 @@
                       <button type="button" class="btn btn-outline-primary btnLow" data-id={{product.id}}>-</button>
                       <button type="button" class="btn btn-outline-primary count1">1</button>
                       <button type="button" class="btn btn-outline-primary btnUp" data-id={{product.id}}>+</button>
-                      <button type="button" class="updateBtn btn btn-outline-primary">
-                        به روز رسانی سبد خرید
-                      </button>
                     </div>  
+                    
                     {% include 'products/snippets/update_cart.html' with in_cart=True %}
                     
                       <p class="priceList1 font-weight-bold mr-auto">{{ product.price }}<span class="text-muted mr-1">تومان</span></p>
@@ -46,6 +44,7 @@
             {% endif %}
             <!--###End of Single product###-->
           </div>
+          
         </div>
         <!--###End of List of products###-->
         <!--###Checkout Section##-->
@@ -64,7 +63,10 @@
               <p class="topLeft4 font-weight-bold">{{ cart.persian_total_price }}<span class="font-weight-200 mr-1" style="font-size:0.8rem;">تومان</span></p>
             </div>
             <div class="card-footer checkoutBtn">
-              <button type="button" class="btn btn-lg btn-block">ادامه فرآیند خرید</button>
+              <button type="button" class="continueBuy btn btn-lg btn-block">ادامه فرآیند خرید</button>
+              <button type="button" class="updateBtn btn btn-lg btn-block">
+                به روز رسانی سبد خرید
+              </button>
             </div>
           </div>
         </div>
