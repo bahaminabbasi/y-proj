@@ -29,19 +29,10 @@ def maxlimit(request):
         product_id = request.POST['product_id']
         counterPro = int(request.POST['counterPro'])
         product = get_object_or_404(Product, pk=product_id)
-        if product.quantity <= counterPro:
+        if product.quantity - 2 <= counterPro:
             return JsonResponse({'status':'ok'})
         else:
             return JsonResponse({'status':'notOk'})
 
-# def minlimit(request):
-#     if request.method == 'POST':
-#         product_id = request.POST['product_id']
-#         counterPro = int(request.POST['counterPro'])
-#         product = get_object_or_404(Product, pk=product_id)
-#         if product.quantity >= counterPro:
-#             return JsonResponse({'status':'ok'})
-#         else:
-#             return JsonResponse({'status':'notOk'})  
 
 
