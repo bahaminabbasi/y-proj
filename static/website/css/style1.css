@@ -613,7 +613,7 @@ div.item .card{
   padding: 0.2rem 0.4rem;
   position: absolute;
   right: 0;
-  top: 38%;
+  top: 30%;
   transform: translateX(110%);
   transition: all 0.7s ease-in-out;
 }

@@ -126,7 +126,7 @@ $(document).ready(function(){
     }
   });
 
-})
+});
 
 //######btn Low Up #### single product######//
 $(document).ready(function(){
@@ -151,6 +151,7 @@ $(document).ready(function(){
     $(this).css('display', 'none')
     $(this).prev('.continueBuy').css('display', 'block')
   });
+});
 
 //###Product.html slider Price####
 $(document).ready(function(){
@@ -206,6 +207,6 @@ $('button.dropButton').click(function(){
   $(this).toggleClass('open1') 
 });
 
-})
-
 });
+
+// });

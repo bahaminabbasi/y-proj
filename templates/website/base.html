@@ -12,13 +12,6 @@
   <link rel="stylesheet" href="{% static 'website/js/jquery-ui.css' %}">
   <link rel="stylesheet" href="{% static 'website/css/owl.carousel.min.css' %}">
   <link rel="stylesheet" href="{% static 'website/css/owl.theme.default.min.css' %}">
-  <script src="{% static 'website/js/jquery-3.3.1.min.js' %}"></script>
-  <script src="{% static 'website/js/jquery.min.js' %}"></script>
-  <script src="{% static 'website/js/popper.min.js' %}"></script>
-  <script src="{% static 'website/js/bootstrap.min.js' %}"></script>
-  <script src="{% static 'website/js/owl.carousel.min.js' %}"></script>
-  <script src="{% static 'website/js/jquery-ui.js' %}"></script>
-  <script src="{% static 'website/js/main.js' %}"></script>
   <script src="https://kit.fontawesome.com/594614f60b.js"></script>
   <style>
     @font-face{
@@ -40,7 +33,17 @@
       {% include 'snippets/small_nav.html' %}
 
       <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js" integrity="sha256-DI6NdAhhFRnO2k51mumYeDShet3I8AKCQf/tf7ARNhI=" crossorigin="anonymous"></script>
       {% block 'custome_js' %}
       {% endblock %}
+
+  
+  <script src="{% static 'website/js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'website/js/jquery.min.js' %}"></script>
+  <script src="{% static 'website/js/popper.min.js' %}"></script>
+  <script src="{% static 'website/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'website/js/jquery-ui.js' %}"></script>
+  <script src="{% static 'website/js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'website/js/main.js' %}"></script>
 </body>
 </html>
