@@ -208,9 +208,4 @@ $('button.dropButton').click(function(){
 
 })
 
-<<<<<<< HEAD
 });
-})
-=======
-});
->>>>>>> 30a06fd5edbe28fe2630a6b062f82df6de97b904
