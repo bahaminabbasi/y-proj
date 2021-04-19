@@ -126,7 +126,7 @@ $(document).ready(function(){
     }
   });
 
-})
+});
 
 //######btn Low Up #### single product######//
 $(document).ready(function(){
@@ -151,6 +151,7 @@ $(document).ready(function(){
     $(this).css('display', 'none')
     $(this).prev('.continueBuy').css('display', 'block')
   });
+});
 
 //###Product.html slider Price####
 $(document).ready(function(){
@@ -206,6 +207,19 @@ $('button.dropButton').click(function(){
   $(this).toggleClass('open1') 
 });
 
-})
-
 });
+
+<<<<<<< HEAD
+});
+=======
+<<<<<<< HEAD
+// });
+=======
+<<<<<<< HEAD
+});
+})
+=======
+});
+>>>>>>> 30a06fd5edbe28fe2630a6b062f82df6de97b904
+>>>>>>> a8c8e893328d090c882b4271b199a14771c42f78
+>>>>>>> 0582b108239a57c81a845e663bf06587178290e9
