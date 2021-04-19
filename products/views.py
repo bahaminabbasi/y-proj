@@ -3,7 +3,8 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from .models import Product
 from .filters import ProductFilter
-from carts.models import Cart
+from carts.models import Order
+
 from iteminfo.models import Category, SubCategory
 from picture.models import Picture
 
@@ -28,7 +29,7 @@ def products_list(request):
 
 
 def product_detail(request, slug):
-    cart_obj, new_obj = Cart.objects.new_or_get(request)
+    cart_obj, new_obj = Order.objects.new_or_get(request)
     qs = Product.objects.filter(slug=slug)
     if qs.exists():
         product = qs.first()

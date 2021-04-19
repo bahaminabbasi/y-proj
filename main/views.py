@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponse
 
 from .models import MainPictures
 from products.models import Product
-from carts.models import Cart
+from carts.models import Order
 
 
 def home(request):
