@@ -1234,3 +1234,25 @@ a.adm{
 a.adm:hover{
   color: #E63946;
 }
+
+/* Bahamin added theses */
+
+.chg-quantity{
+	width: 12px;
+	cursor: pointer;
+	display: block;
+	margin-top: 5px;
+	transition:.1s;
+}
+
+.chg-quantity:hover{
+	opacity: .6;
+}
+
+.quantity{
+	display: inline-block;
+	font-weight: 700;
+	padding-right:10px;
+	
+
+}

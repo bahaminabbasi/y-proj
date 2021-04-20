@@ -23,11 +23,13 @@
                     <h5>{{ item.product.persian_title }}</h5>
                   </div>
                   <div class="col-9 col-lg-9 bottumList1 d-flex align-items-end p-1">
-                    <div class="btn-group" style="direction:ltr;" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-outline-primary btnLow" data-id={{item.id}}>-</button>
-                      <button type="button" class="btn btn-outline-primary count1">1</button>
-                      <button type="button" class="btn btn-outline-primary btnUp" data-id={{item.id}}>+</button>
-                    </div>  
+                    <div style="flex:1">
+                      <p class="quantity">{{ item.quantity }}</p>
+                      <div class="quantity">
+                          <img data-product={{item.product.id}} data-action="add" class="chg-quantity update-cart" src="{% static  'website/img/arrow-up.png' %}">
+                          <img data-product={{item.product.id}} data-action="remove" class="chg-quantity update-cart" src="{% static  'website/img/arrow-down.png' %}">
+                      </div>
+                  </div>
                     
                     {% include 'products/snippets/update_cart.html' with in_cart=True %}
                     
@@ -52,7 +54,7 @@
           <div class="card checkout1">
             <div class="card-body checkoutTop">
               <p class="topRight4">قیمت کالاها</p>
-              <p class="topLeft4 font-weight-bold">{{ cart.persian_subtotal_price }}<span class="font-weight-200 text-muted mr-1" style="font-size:0.8rem;">تومان</span></p>
+              <p class="topLeft4 font-weight-bold">{{ order.get_cart_total }}<span class="font-weight-200 text-muted mr-1" style="font-size:0.8rem;">تومان</span></p>
             </div>
             <div class="card-body checkoutTop">
               <p class="topRight4">هزینه ارسال</p>
