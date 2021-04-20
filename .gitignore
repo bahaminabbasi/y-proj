@@ -15,3 +15,4 @@ static/dashboard/fonts
 static_files/website/fonts
 static_files/website/img
 static_files/website/css/yekan-font
+db.sqlite3
